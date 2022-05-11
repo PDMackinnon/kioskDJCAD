@@ -1,0 +1,347 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F925BA6D282BBAD5005C298C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F925BA6C282BBAD5005C298C /* AppDelegate.swift */; };
+		F925BA6F282BBAD5005C298C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F925BA6E282BBAD5005C298C /* ViewController.swift */; };
+		F925BA71282BBAE2005C298C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F925BA70282BBAE2005C298C /* Assets.xcassets */; };
+		F925BA74282BBAE2005C298C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F925BA72282BBAE2005C298C /* Main.storyboard */; };
+		F925BA7F282BC7CC005C298C /* webViewController01.swift in Sources */ = {isa = PBXBuildFile; fileRef = F925BA7E282BC7CC005C298C /* webViewController01.swift */; };
+		F925BA82282BC879005C298C /* webViewController02.swift in Sources */ = {isa = PBXBuildFile; fileRef = F925BA81282BC879005C298C /* webViewController02.swift */; };
+		F925BA86282BE6AD005C298C /* webViewController03.swift in Sources */ = {isa = PBXBuildFile; fileRef = F925BA85282BE6AD005C298C /* webViewController03.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F925BA69282BBAD5005C298C /* kioskDJCAD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kioskDJCAD.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F925BA6C282BBAD5005C298C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F925BA6E282BBAD5005C298C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F925BA70282BBAE2005C298C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F925BA73282BBAE2005C298C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F925BA75282BBAE2005C298C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F925BA76282BBAE2005C298C /* kioskDJCAD.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = kioskDJCAD.entitlements; sourceTree = "<group>"; };
+		F925BA7E282BC7CC005C298C /* webViewController01.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = webViewController01.swift; path = kioskDJCAD/webViewController01.swift; sourceTree = "<group>"; };
+		F925BA81282BC879005C298C /* webViewController02.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = webViewController02.swift; path = kioskDJCAD/webViewController02.swift; sourceTree = "<group>"; };
+		F925BA85282BE6AD005C298C /* webViewController03.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = webViewController03.swift; path = kioskDJCAD/webViewController03.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F925BA66282BBAD5005C298C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F925BA60282BBAD5005C298C = {
+			isa = PBXGroup;
+			children = (
+				F925BA7E282BC7CC005C298C /* webViewController01.swift */,
+				F925BA85282BE6AD005C298C /* webViewController03.swift */,
+				F925BA81282BC879005C298C /* webViewController02.swift */,
+				F925BA6B282BBAD5005C298C /* kioskDJCAD */,
+				F925BA6A282BBAD5005C298C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F925BA6A282BBAD5005C298C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F925BA69282BBAD5005C298C /* kioskDJCAD.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F925BA6B282BBAD5005C298C /* kioskDJCAD */ = {
+			isa = PBXGroup;
+			children = (
+				F925BA6C282BBAD5005C298C /* AppDelegate.swift */,
+				F925BA6E282BBAD5005C298C /* ViewController.swift */,
+				F925BA70282BBAE2005C298C /* Assets.xcassets */,
+				F925BA72282BBAE2005C298C /* Main.storyboard */,
+				F925BA75282BBAE2005C298C /* Info.plist */,
+				F925BA76282BBAE2005C298C /* kioskDJCAD.entitlements */,
+			);
+			path = kioskDJCAD;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F925BA68282BBAD5005C298C /* kioskDJCAD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F925BA79282BBAE2005C298C /* Build configuration list for PBXNativeTarget "kioskDJCAD" */;
+			buildPhases = (
+				F925BA65282BBAD5005C298C /* Sources */,
+				F925BA66282BBAD5005C298C /* Frameworks */,
+				F925BA67282BBAD5005C298C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = kioskDJCAD;
+			productName = kioskDJCAD;
+			productReference = F925BA69282BBAD5005C298C /* kioskDJCAD.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F925BA61282BBAD5005C298C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					F925BA68282BBAD5005C298C = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = F925BA64282BBAD5005C298C /* Build configuration list for PBXProject "kioskDJCAD" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F925BA60282BBAD5005C298C;
+			productRefGroup = F925BA6A282BBAD5005C298C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F925BA68282BBAD5005C298C /* kioskDJCAD */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F925BA67282BBAD5005C298C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F925BA71282BBAE2005C298C /* Assets.xcassets in Resources */,
+				F925BA74282BBAE2005C298C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F925BA65282BBAD5005C298C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F925BA6F282BBAD5005C298C /* ViewController.swift in Sources */,
+				F925BA86282BE6AD005C298C /* webViewController03.swift in Sources */,
+				F925BA7F282BC7CC005C298C /* webViewController01.swift in Sources */,
+				F925BA6D282BBAD5005C298C /* AppDelegate.swift in Sources */,
+				F925BA82282BC879005C298C /* webViewController02.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F925BA72282BBAE2005C298C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F925BA73282BBAE2005C298C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F925BA77282BBAE2005C298C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F925BA78282BBAE2005C298C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		F925BA7A282BBAE2005C298C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = kioskDJCAD/kioskDJCAD.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4Z7DB3ADJ6;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = kioskDJCAD/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = uk.co.paulmackinnon.kioskDJCAD;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F925BA7B282BBAE2005C298C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = kioskDJCAD/kioskDJCAD.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4Z7DB3ADJ6;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = kioskDJCAD/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = uk.co.paulmackinnon.kioskDJCAD;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F925BA64282BBAD5005C298C /* Build configuration list for PBXProject "kioskDJCAD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F925BA77282BBAE2005C298C /* Debug */,
+				F925BA78282BBAE2005C298C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F925BA79282BBAE2005C298C /* Build configuration list for PBXNativeTarget "kioskDJCAD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F925BA7A282BBAE2005C298C /* Debug */,
+				F925BA7B282BBAE2005C298C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F925BA61282BBAD5005C298C /* Project object */;
+}
