@@ -10,6 +10,20 @@ import WebKit
 
 class webViewController03: NSViewController,WKUIDelegate {
 
+    override func viewDidAppear() {
+        super.viewDidAppear()
+        
+        if let window = self.view.window {
+            if (!window.isZoomed) {
+                window.zoom(self);
+            };
+        }
+
+    }
+    
+    
+    
+    var destURLString = "";
 
     @IBOutlet weak var reloadButton: NSButton!
     @IBOutlet weak var theWebView: WKWebView!
@@ -32,8 +46,9 @@ class webViewController03: NSViewController,WKUIDelegate {
         let tempStr = theWebView?.url?.absoluteString ?? "not known..."
         print("hello website 1 \(tempStr)");
         
+        print("we are going to : \(destURLString)");
         
-        guard let u = URL(string: "https://www.deviantart.com/maxasabin/art/My-town-912906370") else { return };
+        guard let u = URL(string: destURLString) else { return };
         
         
         let r = URLRequest(url: u);
