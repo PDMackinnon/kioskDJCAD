@@ -22,5 +22,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
 
+    
+    func openPrefsDialog() {
+        
+    }
+    
+    
 }
 

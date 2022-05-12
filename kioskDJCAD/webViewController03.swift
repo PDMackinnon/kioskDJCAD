@@ -32,17 +32,27 @@ class webViewController03: NSViewController,WKUIDelegate {
     @IBAction func reloadPage(_ sender: NSButton) {
         print("reload ?");
         
-        let tempStr = theWebView?.url?.absoluteString ?? "not known..."
-        print("hello website 1 \(tempStr)");
-        
-        
-        theWebView.reload();
+        loadWebPage();
+
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do view setup here.
+    
+    @IBAction func refreshPage(_ sender: NSButton) {
+        theWebView.reload();
+
         
+    }
+    
+    @IBAction func closeModal(_ sender: NSButton) {
+        if let window = self.view.window {
+            window.close();
+        }
+        
+    }
+    
+
+    
+    func loadWebPage() {
         let tempStr = theWebView?.url?.absoluteString ?? "not known..."
         print("hello website 1 \(tempStr)");
         
@@ -59,6 +69,14 @@ class webViewController03: NSViewController,WKUIDelegate {
         print("hello website 1 \(tempStr2)");
         
         
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do view setup here.
+        
+
+        loadWebPage();
         
         
 //        var URLRequest: r = URLRequest();

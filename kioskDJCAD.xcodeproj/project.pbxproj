@@ -14,6 +14,8 @@
 		F925BA7F282BC7CC005C298C /* webViewController01.swift in Sources */ = {isa = PBXBuildFile; fileRef = F925BA7E282BC7CC005C298C /* webViewController01.swift */; };
 		F925BA82282BC879005C298C /* webViewController02.swift in Sources */ = {isa = PBXBuildFile; fileRef = F925BA81282BC879005C298C /* webViewController02.swift */; };
 		F925BA86282BE6AD005C298C /* webViewController03.swift in Sources */ = {isa = PBXBuildFile; fileRef = F925BA85282BE6AD005C298C /* webViewController03.swift */; };
+		F925BA89282C0A05005C298C /* prefs.xib in Resources */ = {isa = PBXBuildFile; fileRef = F925BA88282C0A05005C298C /* prefs.xib */; };
+		F925BA8D282C0DFD005C298C /* PrefsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F925BA8B282C0DFD005C298C /* PrefsController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		F925BA7E282BC7CC005C298C /* webViewController01.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = webViewController01.swift; path = kioskDJCAD/webViewController01.swift; sourceTree = "<group>"; };
 		F925BA81282BC879005C298C /* webViewController02.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = webViewController02.swift; path = kioskDJCAD/webViewController02.swift; sourceTree = "<group>"; };
 		F925BA85282BE6AD005C298C /* webViewController03.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = webViewController03.swift; path = kioskDJCAD/webViewController03.swift; sourceTree = "<group>"; };
+		F925BA88282C0A05005C298C /* prefs.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = prefs.xib; sourceTree = "<group>"; };
+		F925BA8B282C0DFD005C298C /* PrefsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefsController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,8 @@
 				F925BA72282BBAE2005C298C /* Main.storyboard */,
 				F925BA75282BBAE2005C298C /* Info.plist */,
 				F925BA76282BBAE2005C298C /* kioskDJCAD.entitlements */,
+				F925BA88282C0A05005C298C /* prefs.xib */,
+				F925BA8B282C0DFD005C298C /* PrefsController.swift */,
 			);
 			path = kioskDJCAD;
 			sourceTree = "<group>";
@@ -131,6 +137,7 @@
 			files = (
 				F925BA71282BBAE2005C298C /* Assets.xcassets in Resources */,
 				F925BA74282BBAE2005C298C /* Main.storyboard in Resources */,
+				F925BA89282C0A05005C298C /* prefs.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F925BA8D282C0DFD005C298C /* PrefsController.swift in Sources */,
 				F925BA6F282BBAD5005C298C /* ViewController.swift in Sources */,
 				F925BA86282BE6AD005C298C /* webViewController03.swift in Sources */,
 				F925BA7F282BC7CC005C298C /* webViewController01.swift in Sources */,
@@ -284,6 +292,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = kioskDJCAD/kioskDJCAD.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 4Z7DB3ADJ6;
@@ -305,6 +314,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = kioskDJCAD/kioskDJCAD.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 4Z7DB3ADJ6;
