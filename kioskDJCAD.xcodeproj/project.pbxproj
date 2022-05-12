@@ -11,8 +11,6 @@
 		F925BA6F282BBAD5005C298C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F925BA6E282BBAD5005C298C /* ViewController.swift */; };
 		F925BA71282BBAE2005C298C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F925BA70282BBAE2005C298C /* Assets.xcassets */; };
 		F925BA74282BBAE2005C298C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F925BA72282BBAE2005C298C /* Main.storyboard */; };
-		F925BA7F282BC7CC005C298C /* webViewController01.swift in Sources */ = {isa = PBXBuildFile; fileRef = F925BA7E282BC7CC005C298C /* webViewController01.swift */; };
-		F925BA82282BC879005C298C /* webViewController02.swift in Sources */ = {isa = PBXBuildFile; fileRef = F925BA81282BC879005C298C /* webViewController02.swift */; };
 		F925BA86282BE6AD005C298C /* webViewController03.swift in Sources */ = {isa = PBXBuildFile; fileRef = F925BA85282BE6AD005C298C /* webViewController03.swift */; };
 		F925BA89282C0A05005C298C /* prefs.xib in Resources */ = {isa = PBXBuildFile; fileRef = F925BA88282C0A05005C298C /* prefs.xib */; };
 		F925BA8D282C0DFD005C298C /* PrefsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F925BA8B282C0DFD005C298C /* PrefsController.swift */; };
@@ -26,9 +24,7 @@
 		F925BA73282BBAE2005C298C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F925BA75282BBAE2005C298C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F925BA76282BBAE2005C298C /* kioskDJCAD.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = kioskDJCAD.entitlements; sourceTree = "<group>"; };
-		F925BA7E282BC7CC005C298C /* webViewController01.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = webViewController01.swift; path = kioskDJCAD/webViewController01.swift; sourceTree = "<group>"; };
-		F925BA81282BC879005C298C /* webViewController02.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = webViewController02.swift; path = kioskDJCAD/webViewController02.swift; sourceTree = "<group>"; };
-		F925BA85282BE6AD005C298C /* webViewController03.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = webViewController03.swift; path = kioskDJCAD/webViewController03.swift; sourceTree = "<group>"; };
+		F925BA85282BE6AD005C298C /* webViewController03.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = webViewController03.swift; sourceTree = "<group>"; };
 		F925BA88282C0A05005C298C /* prefs.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = prefs.xib; sourceTree = "<group>"; };
 		F925BA8B282C0DFD005C298C /* PrefsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefsController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -47,9 +43,6 @@
 		F925BA60282BBAD5005C298C = {
 			isa = PBXGroup;
 			children = (
-				F925BA7E282BC7CC005C298C /* webViewController01.swift */,
-				F925BA85282BE6AD005C298C /* webViewController03.swift */,
-				F925BA81282BC879005C298C /* webViewController02.swift */,
 				F925BA6B282BBAD5005C298C /* kioskDJCAD */,
 				F925BA6A282BBAD5005C298C /* Products */,
 			);
@@ -66,6 +59,7 @@
 		F925BA6B282BBAD5005C298C /* kioskDJCAD */ = {
 			isa = PBXGroup;
 			children = (
+				F925BA85282BE6AD005C298C /* webViewController03.swift */,
 				F925BA6C282BBAD5005C298C /* AppDelegate.swift */,
 				F925BA6E282BBAD5005C298C /* ViewController.swift */,
 				F925BA70282BBAE2005C298C /* Assets.xcassets */,
@@ -151,9 +145,7 @@
 				F925BA8D282C0DFD005C298C /* PrefsController.swift in Sources */,
 				F925BA6F282BBAD5005C298C /* ViewController.swift in Sources */,
 				F925BA86282BE6AD005C298C /* webViewController03.swift in Sources */,
-				F925BA7F282BC7CC005C298C /* webViewController01.swift in Sources */,
 				F925BA6D282BBAD5005C298C /* AppDelegate.swift in Sources */,
-				F925BA82282BC879005C298C /* webViewController02.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +272,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
