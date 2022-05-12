@@ -19,6 +19,19 @@
                                     <items>
                                         <menuItem title="About kioskDJCAD" id="5kV-Vb-QxS">
                                             <modifierMask key="keyEquivalentModifierMask"/>
+                                            <menu key="submenu" id="kG4-7d-e0X">
+                                                <items>
+                                                    <menuItem title="Item 1" id="OQZ-Ox-Xrq">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                    <menuItem title="Item 2" id="u4n-aA-Y5U">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                    <menuItem title="Item 3" id="Op7-UZ-T8e">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                </items>
+                                            </menu>
                                             <connections>
                                                 <action selector="orderFrontStandardAboutPanel:" target="Ady-hI-5gd" id="Exp-CZ-Vem"/>
                                             </connections>
@@ -82,6 +95,10 @@
                                         </menuItem>
                                     </items>
                                 </menu>
+                            </menuItem>
+                            <menuItem title="Debug" id="7lg-2y-bgD">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Debug" id="0Cz-6x-pQa"/>
                             </menuItem>
                         </items>
                     </menu>
@@ -234,14 +251,6 @@
                                             </subviews>
                                         </view>
                                     </box>
-                                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EOD-Ca-fcg">
-                                        <rect key="frame" x="642" y="13" width="80" height="32"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <buttonCell key="cell" type="push" title="cancel" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="MSG-nB-ApR">
-                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="system"/>
-                                        </buttonCell>
-                                    </button>
                                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3I9-Nx-fJv">
                                         <rect key="frame" x="745" y="13" width="59" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -381,10 +390,10 @@ DQ
                 </viewController>
                 <customObject id="yzD-RQ-Ecv" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1356" y="1001"/>
+            <point key="canvasLocation" x="1390" y="983"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="X4i-VZ-djO"/>
+        <segue reference="5zz-NP-2Lf"/>
     </inferredMetricsTieBreakers>
 </document>

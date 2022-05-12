@@ -8,7 +8,7 @@
 import Cocoa
 import WebKit
 
-class webViewController03: NSViewController,WKUIDelegate {
+class webViewController04: NSViewController,WKUIDelegate {
 
     override func viewDidAppear() {
         super.viewDidAppear()

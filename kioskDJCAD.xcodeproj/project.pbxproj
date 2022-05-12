@@ -12,8 +12,8 @@
 		F925BA71282BBAE2005C298C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F925BA70282BBAE2005C298C /* Assets.xcassets */; };
 		F925BA74282BBAE2005C298C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F925BA72282BBAE2005C298C /* Main.storyboard */; };
 		F925BA86282BE6AD005C298C /* webViewController03.swift in Sources */ = {isa = PBXBuildFile; fileRef = F925BA85282BE6AD005C298C /* webViewController03.swift */; };
-		F925BA89282C0A05005C298C /* prefs.xib in Resources */ = {isa = PBXBuildFile; fileRef = F925BA88282C0A05005C298C /* prefs.xib */; };
 		F925BA8D282C0DFD005C298C /* PrefsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F925BA8B282C0DFD005C298C /* PrefsController.swift */; };
+		F925BAA8282D432A005C298C /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F925BAA7282D432A005C298C /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,8 +25,8 @@
 		F925BA75282BBAE2005C298C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F925BA76282BBAE2005C298C /* kioskDJCAD.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = kioskDJCAD.entitlements; sourceTree = "<group>"; };
 		F925BA85282BE6AD005C298C /* webViewController03.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = webViewController03.swift; sourceTree = "<group>"; };
-		F925BA88282C0A05005C298C /* prefs.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = prefs.xib; sourceTree = "<group>"; };
 		F925BA8B282C0DFD005C298C /* PrefsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefsController.swift; sourceTree = "<group>"; };
+		F925BAA7282D432A005C298C /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F925BAA8282D432A005C298C /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,6 +46,7 @@
 			children = (
 				F925BA6B282BBAD5005C298C /* kioskDJCAD */,
 				F925BA6A282BBAD5005C298C /* Products */,
+				F925BAA6282D432A005C298C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,10 +68,17 @@
 				F925BA72282BBAE2005C298C /* Main.storyboard */,
 				F925BA75282BBAE2005C298C /* Info.plist */,
 				F925BA76282BBAE2005C298C /* kioskDJCAD.entitlements */,
-				F925BA88282C0A05005C298C /* prefs.xib */,
 				F925BA8B282C0DFD005C298C /* PrefsController.swift */,
 			);
 			path = kioskDJCAD;
+			sourceTree = "<group>";
+		};
+		F925BAA6282D432A005C298C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F925BAA7282D432A005C298C /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,7 +140,6 @@
 			files = (
 				F925BA71282BBAE2005C298C /* Assets.xcassets in Resources */,
 				F925BA74282BBAE2005C298C /* Main.storyboard in Resources */,
-				F925BA89282C0A05005C298C /* prefs.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,6 +303,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.paulmackinnon.kioskDJCAD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -317,6 +326,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.paulmackinnon.kioskDJCAD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
