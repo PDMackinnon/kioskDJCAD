@@ -280,49 +280,102 @@ DQ
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="kioskDJCAD" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="800" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1180" height="802"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <subviews>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wAF-s3-EAC">
-                                <rect key="frame" x="250" y="283" width="100" height="32"/>
-                                <buttonCell key="cell" type="push" title="WebSite 1" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Gpf-xL-1Hl">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                    <connections>
-                                        <binding destination="4Aa-QU-DFe" name="title" keyPath="values.firstSiteName" id="iP7-Ba-9kE"/>
-                                    </connections>
-                                </buttonCell>
-                                <connections>
-                                    <segue destination="w7y-b1-ycp" kind="modal" identifier="first" id="5zz-NP-2Lf"/>
-                                </connections>
-                            </button>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="M4p-Hp-czd">
-                                <rect key="frame" x="449" y="283" width="102" height="32"/>
-                                <buttonCell key="cell" type="push" title="WebSite 2" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="w21-hQ-Mve">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                    <connections>
-                                        <binding destination="4Aa-QU-DFe" name="title" keyPath="values.secondSiteName" id="56Q-9U-9cB"/>
-                                    </connections>
-                                </buttonCell>
-                                <connections>
-                                    <binding destination="Jep-Sh-47A" name="title" keyPath="values" id="C3m-Ay-WSu"/>
-                                    <segue destination="w7y-b1-ycp" kind="modal" identifier="second" id="X4i-VZ-djO"/>
-                                </connections>
-                            </button>
+                            <stackView distribution="fillEqually" orientation="horizontal" alignment="top" spacing="250" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Ki-1V-jxc">
+                                <rect key="frame" x="65" y="147" width="1050" height="508"/>
+                                <subviews>
+                                    <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h1m-N8-2OZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="400" height="508"/>
+                                        <subviews>
+                                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dbh-zl-REL">
+                                                <rect key="frame" x="0.0" y="108" width="400" height="400"/>
+                                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="doggie400x400" id="h6G-7u-ncG"/>
+                                            </imageView>
+                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wAF-s3-EAC">
+                                                <rect key="frame" x="0.0" y="0.0" width="400" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="W6Y-ib-mgu"/>
+                                                    <constraint firstAttribute="width" constant="400" id="kbC-vl-hI3"/>
+                                                </constraints>
+                                                <buttonCell key="cell" type="square" title="WebSite 1" bezelStyle="shadowlessSquare" imagePosition="above" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Gpf-xL-1Hl">
+                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                    <font key="font" size="36" name="Helvetica"/>
+                                                    <connections>
+                                                        <binding destination="4Aa-QU-DFe" name="title" keyPath="values.firstSiteName" id="iP7-Ba-9kE"/>
+                                                    </connections>
+                                                </buttonCell>
+                                                <connections>
+                                                    <segue destination="w7y-b1-ycp" kind="modal" identifier="first" id="5zz-NP-2Lf"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <visibilityPriorities>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                        </visibilityPriorities>
+                                        <customSpacing>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                        </customSpacing>
+                                    </stackView>
+                                    <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oPJ-oc-72I">
+                                        <rect key="frame" x="650" y="0.0" width="400" height="508"/>
+                                        <subviews>
+                                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tfI-z2-6cu">
+                                                <rect key="frame" x="0.0" y="108" width="400" height="400"/>
+                                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="cat400x400" id="Vz5-zJ-ehG"/>
+                                            </imageView>
+                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="M4p-Hp-czd">
+                                                <rect key="frame" x="0.0" y="0.0" width="400" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="400" id="cxG-X0-Ros"/>
+                                                    <constraint firstAttribute="height" constant="100" id="oJc-jr-rr9"/>
+                                                </constraints>
+                                                <buttonCell key="cell" type="square" title="WebSite 2" bezelStyle="shadowlessSquare" imagePosition="above" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="w21-hQ-Mve">
+                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                    <font key="font" size="36" name="Helvetica"/>
+                                                    <connections>
+                                                        <binding destination="4Aa-QU-DFe" name="title" keyPath="values.secondSiteName" id="56Q-9U-9cB"/>
+                                                    </connections>
+                                                </buttonCell>
+                                                <connections>
+                                                    <binding destination="Jep-Sh-47A" name="title" keyPath="values" id="C3m-Ay-WSu"/>
+                                                    <segue destination="w7y-b1-ycp" kind="modal" identifier="second" id="X4i-VZ-djO"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <visibilityPriorities>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                        </visibilityPriorities>
+                                        <customSpacing>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                        </customSpacing>
+                                    </stackView>
+                                </subviews>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="wAF-s3-EAC" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" constant="-100" id="AAE-a1-7ln"/>
-                            <constraint firstItem="wAF-s3-EAC" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="bg5-vN-Q7v"/>
-                            <constraint firstItem="M4p-Hp-czd" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" constant="100" id="iiD-Ee-AGe"/>
-                            <constraint firstItem="M4p-Hp-czd" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="zB5-4A-fHD"/>
+                            <constraint firstItem="8Ki-1V-jxc" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="E8s-VT-RgY"/>
+                            <constraint firstItem="8Ki-1V-jxc" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="Wgy-Hb-Xsd"/>
                         </constraints>
                     </view>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <userDefaultsController id="4Aa-QU-DFe"/>
             </objects>
-            <point key="canvasLocation" x="387" y="992"/>
+            <point key="canvasLocation" x="436" y="1093"/>
         </scene>
         <!--View Controller 1-->
         <scene sceneID="yfr-i9-2rN">
@@ -387,16 +440,19 @@ DQ
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="reloadButton" destination="ndc-DA-WgQ" id="HlM-d6-8LC"/>
                         <outlet property="theWebView" destination="muW-32-lxC" id="3uw-CM-nCS"/>
                     </connections>
                 </viewController>
                 <customObject id="yzD-RQ-Ecv" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1390" y="983"/>
+            <point key="canvasLocation" x="1800" y="1021"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="5zz-NP-2Lf"/>
     </inferredMetricsTieBreakers>
+    <resources>
+        <image name="cat400x400" width="400" height="400"/>
+        <image name="doggie400x400" width="400" height="400"/>
+    </resources>
 </document>
