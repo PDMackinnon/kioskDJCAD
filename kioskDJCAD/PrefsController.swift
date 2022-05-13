@@ -14,4 +14,18 @@ class PrefsController: NSViewController {
         // Do view setup here.
     }
     
+    @IBAction func doneEditOK(_ sender: NSButton) {
+        if let window = self.view.window {
+            
+            window.makeFirstResponder(sender);
+
+            window.close();
+            
+            
+        }
+        
+        
+        print("done");
+        
+    }
 }

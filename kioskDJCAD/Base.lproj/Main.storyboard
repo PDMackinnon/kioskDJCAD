@@ -261,6 +261,9 @@
 DQ
 </string>
                                         </buttonCell>
+                                        <connections>
+                                            <action selector="doneEditOK:" target="HCv-hY-xs1" id="L4n-ej-bbq"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </customView>
