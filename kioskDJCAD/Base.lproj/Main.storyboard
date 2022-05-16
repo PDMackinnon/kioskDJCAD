@@ -306,22 +306,18 @@ DQ
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <subviews>
                             <stackView distribution="fillEqually" orientation="horizontal" alignment="top" spacing="250" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" misplaced="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Ki-1V-jxc">
-                                <rect key="frame" x="54" y="156" width="1050" height="508"/>
+                                <rect key="frame" x="54" y="164" width="1050" height="500"/>
                                 <subviews>
                                     <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h1m-N8-2OZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="400" height="508"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="400" height="500"/>
                                         <subviews>
-                                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dbh-zl-REL">
-                                                <rect key="frame" x="0.0" y="108" width="400" height="400"/>
-                                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="doggie400x400" id="h6G-7u-ncG"/>
-                                            </imageView>
                                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wAF-s3-EAC">
-                                                <rect key="frame" x="0.0" y="0.0" width="400" height="100"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="400" height="500"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="100" id="W6Y-ib-mgu"/>
+                                                    <constraint firstAttribute="height" constant="500" id="W6Y-ib-mgu"/>
                                                     <constraint firstAttribute="width" constant="400" id="kbC-vl-hI3"/>
                                                 </constraints>
-                                                <buttonCell key="cell" type="square" title="WebSite 1" bezelStyle="shadowlessSquare" image="doggie400x400" imagePosition="right" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Gpf-xL-1Hl">
+                                                <buttonCell key="cell" type="square" title="WebSite 1" bezelStyle="shadowlessSquare" image="doggie400x400" imagePosition="above" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Gpf-xL-1Hl">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" size="36" name="Helvetica"/>
                                                     <connections>
@@ -335,27 +331,21 @@ DQ
                                         </subviews>
                                         <visibilityPriorities>
                                             <integer value="1000"/>
-                                            <integer value="1000"/>
                                         </visibilityPriorities>
                                         <customSpacing>
-                                            <real value="3.4028234663852886e+38"/>
                                             <real value="3.4028234663852886e+38"/>
                                         </customSpacing>
                                     </stackView>
                                     <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oPJ-oc-72I">
-                                        <rect key="frame" x="650" y="0.0" width="400" height="508"/>
+                                        <rect key="frame" x="650" y="0.0" width="400" height="500"/>
                                         <subviews>
-                                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tfI-z2-6cu">
-                                                <rect key="frame" x="0.0" y="108" width="400" height="400"/>
-                                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="cat400x400" id="Vz5-zJ-ehG"/>
-                                            </imageView>
                                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="M4p-Hp-czd">
-                                                <rect key="frame" x="0.0" y="0.0" width="400" height="100"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="400" height="500"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="400" id="cxG-X0-Ros"/>
-                                                    <constraint firstAttribute="height" constant="100" id="oJc-jr-rr9"/>
+                                                    <constraint firstAttribute="height" constant="500" id="oJc-jr-rr9"/>
                                                 </constraints>
-                                                <buttonCell key="cell" type="square" title="WebSite 2" bezelStyle="shadowlessSquare" image="cat400x400" imagePosition="left" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="w21-hQ-Mve">
+                                                <buttonCell key="cell" type="square" title="WebSite 2" bezelStyle="shadowlessSquare" image="cat400x400" imagePosition="above" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="w21-hQ-Mve">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" size="36" name="Helvetica"/>
                                                     <connections>
@@ -370,10 +360,8 @@ DQ
                                         </subviews>
                                         <visibilityPriorities>
                                             <integer value="1000"/>
-                                            <integer value="1000"/>
                                         </visibilityPriorities>
                                         <customSpacing>
-                                            <real value="3.4028234663852886e+38"/>
                                             <real value="3.4028234663852886e+38"/>
                                         </customSpacing>
                                     </stackView>
@@ -394,10 +382,6 @@ DQ
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="image1" destination="dbh-zl-REL" id="4GN-zi-7hS"/>
-                        <outlet property="image1View" destination="dbh-zl-REL" id="Mjm-0h-RGy"/>
-                        <outlet property="image2" destination="tfI-z2-6cu" id="34F-ar-WVO"/>
-                        <outlet property="image2View" destination="tfI-z2-6cu" id="aol-Hc-RaP"/>
                         <outlet property="imgButton1" destination="wAF-s3-EAC" id="Goc-Mx-0Yv"/>
                         <outlet property="imgButton2" destination="M4p-Hp-czd" id="pvN-qc-hYq"/>
                     </connections>

@@ -9,8 +9,7 @@ import Cocoa
 
 class ViewController: NSViewController {
     
-    @IBOutlet weak var image1: NSImageView!
-    @IBOutlet weak var image2: NSImageView!
+
     
     
     @IBOutlet weak var imgButton1: NSButton!
@@ -29,8 +28,7 @@ class ViewController: NSViewController {
     private let userImgFile1key = "firstFileURL";
     private let userImgFile2key = "secondFileURL";
 
-    @IBOutlet weak var image1View: NSImageView!
-    @IBOutlet weak var image2View: NSImageView!
+
     
     override func viewDidAppear() {
         super.viewDidAppear()
@@ -43,17 +41,6 @@ class ViewController: NSViewController {
             };
         }
 
-//        let home = FileManager.default.homeDirectoryForCurrentUser;
-//        let fileTestURL = home.appendingPathComponent("Pictures/Pavilion.png")
-//        print(fileTestURL);
-        
-//        let testIm: NSImage  = NSImage(contentsOf: fileTestURL)!;
-//        image1.image = testIm;
-
-//        image1.image = NSImage(contentsOfFile: " /Users/pdmackinnon/Documents/DJCAD Apps/Barcelona_Pavilion.tif");
-
-        
-//        print("image1: \(String(describing: image1.image))");
         
         imagesUpdate();
         
@@ -69,7 +56,7 @@ class ViewController: NSViewController {
         if let fileURL1 = userDefaults.url(forKey: userImgFile1key) {
             print(fileURL1.path);
             if FileManager.default.fileExists(atPath: fileURL1.path) {
-                image1View.image = NSImage(contentsOf: fileURL1);
+//                image1View.image = NSImage(contentsOf: fileURL1);
                 
                 imgButton1.image = NSImage(contentsOf: fileURL1);
                 
@@ -83,7 +70,7 @@ class ViewController: NSViewController {
         if let fileURL2 = userDefaults.url(forKey: userImgFile2key) {
             print(fileURL2.path);
             if FileManager.default.fileExists(atPath: fileURL2.path) {
-                image2View.image = NSImage(contentsOf: fileURL2);
+//                image2View.image = NSImage(contentsOf: fileURL2);
                 imgButton2.image = NSImage(contentsOf: fileURL2);
                 } //end if file exists
         } //end if let optional
