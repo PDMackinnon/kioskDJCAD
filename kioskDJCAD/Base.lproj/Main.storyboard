@@ -305,8 +305,8 @@ DQ
                         <rect key="frame" x="0.0" y="0.0" width="1180" height="802"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <subviews>
-                            <stackView distribution="fillEqually" orientation="horizontal" alignment="top" spacing="250" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Ki-1V-jxc">
-                                <rect key="frame" x="65" y="147" width="1050" height="508"/>
+                            <stackView distribution="fillEqually" orientation="horizontal" alignment="top" spacing="250" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" misplaced="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Ki-1V-jxc">
+                                <rect key="frame" x="54" y="156" width="1050" height="508"/>
                                 <subviews>
                                     <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h1m-N8-2OZ">
                                         <rect key="frame" x="0.0" y="0.0" width="400" height="508"/>
@@ -321,7 +321,7 @@ DQ
                                                     <constraint firstAttribute="height" constant="100" id="W6Y-ib-mgu"/>
                                                     <constraint firstAttribute="width" constant="400" id="kbC-vl-hI3"/>
                                                 </constraints>
-                                                <buttonCell key="cell" type="square" title="WebSite 1" bezelStyle="shadowlessSquare" imagePosition="above" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Gpf-xL-1Hl">
+                                                <buttonCell key="cell" type="square" title="WebSite 1" bezelStyle="shadowlessSquare" image="doggie400x400" imagePosition="right" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Gpf-xL-1Hl">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" size="36" name="Helvetica"/>
                                                     <connections>
@@ -355,7 +355,7 @@ DQ
                                                     <constraint firstAttribute="width" constant="400" id="cxG-X0-Ros"/>
                                                     <constraint firstAttribute="height" constant="100" id="oJc-jr-rr9"/>
                                                 </constraints>
-                                                <buttonCell key="cell" type="square" title="WebSite 2" bezelStyle="shadowlessSquare" imagePosition="above" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="w21-hQ-Mve">
+                                                <buttonCell key="cell" type="square" title="WebSite 2" bezelStyle="shadowlessSquare" image="cat400x400" imagePosition="left" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="w21-hQ-Mve">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" size="36" name="Helvetica"/>
                                                     <connections>
@@ -398,6 +398,8 @@ DQ
                         <outlet property="image1View" destination="dbh-zl-REL" id="Mjm-0h-RGy"/>
                         <outlet property="image2" destination="tfI-z2-6cu" id="34F-ar-WVO"/>
                         <outlet property="image2View" destination="tfI-z2-6cu" id="aol-Hc-RaP"/>
+                        <outlet property="imgButton1" destination="wAF-s3-EAC" id="Goc-Mx-0Yv"/>
+                        <outlet property="imgButton2" destination="M4p-Hp-czd" id="pvN-qc-hYq"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
