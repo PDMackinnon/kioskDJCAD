@@ -8,6 +8,10 @@
 import Cocoa
 
 class PrefsController: NSViewController {
+    
+    private let userImgFile1key = "firstFileURL";
+    private let userImgFile2key = "secondFileURL";
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,4 +32,32 @@ class PrefsController: NSViewController {
         print("done");
         
     }
+    
+    @IBAction func fileDialog1(_ sender: NSButton) {
+        let userDefaults = UserDefaults.standard;
+        
+        let p = NSOpenPanel();
+        p.begin(completionHandler: {(r) -> Void in
+            if r == NSApplication.ModalResponse.OK {
+                let tempFileURL = p.url ?? URL(fileURLWithPath: "dunno");
+                
+                userDefaults.set(tempFileURL, forKey:self.userImgFile1key);
+            }
+        })
+    }
+    
+    @IBAction func fileDialog2(_ sender: NSButton) {
+        let userDefaults = UserDefaults.standard;
+        
+        let p = NSOpenPanel();
+        p.begin(completionHandler: {(r) -> Void in
+            if r == NSApplication.ModalResponse.OK {
+                let tempFileURL = p.url ?? URL(fileURLWithPath: "dunno");
+                
+                userDefaults.set(tempFileURL, forKey:self.userImgFile2key);
+            }
+        })
+    }
+    
+    
 }

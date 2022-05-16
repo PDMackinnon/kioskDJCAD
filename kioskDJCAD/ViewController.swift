@@ -9,6 +9,11 @@ import Cocoa
 
 class ViewController: NSViewController {
     
+    @IBOutlet weak var image1: NSImageView!
+    
+    @IBOutlet weak var image2: NSImageView!
+    
+    
     var studentName1 = "";
     var studentName2 = "";
 
@@ -19,7 +24,11 @@ class ViewController: NSViewController {
     private let studentName2key = "secondSiteName";
     private let webSiteUrlString1key = "firstSiteURL";
     private let webSiteUrlString2key = "secondSiteURL";
+    private let userImgFile1key = "firstFileURL";
+    private let userImgFile2key = "secondFileURL";
 
+    @IBOutlet weak var image1View: NSImageView!
+    @IBOutlet weak var image2View: NSImageView!
     
     override func viewDidAppear() {
         super.viewDidAppear()
@@ -32,21 +41,53 @@ class ViewController: NSViewController {
             };
         }
 
+//        let home = FileManager.default.homeDirectoryForCurrentUser;
+//        let fileTestURL = home.appendingPathComponent("Pictures/Pavilion.png")
+//        print(fileTestURL);
+        
+//        let testIm: NSImage  = NSImage(contentsOf: fileTestURL)!;
+//        image1.image = testIm;
+
+//        image1.image = NSImage(contentsOfFile: " /Users/pdmackinnon/Documents/DJCAD Apps/Barcelona_Pavilion.tif");
+
+        
+        print("image1: \(String(describing: image1.image))");
+        
+        imagesUpdate();
+        
     }
     
+    func imagesUpdate() {
+        
+        // load images for students if chosen in preferences
+        
+        let userDefaults = UserDefaults.standard;
+        
+        
+        let fileURL1 = userDefaults.url(forKey: userImgFile1key) ?? URL(fileURLWithPath: "Pictures/400.png");
+        let fileURL2 = userDefaults.url(forKey: userImgFile2key) ?? URL(fileURLWithPath: "Pictures/400.png");
+        
+        print(fileURL1.path);
+        print(fileURL2.path);
+
+        
+        if FileManager.default.fileExists(atPath: fileURL1.path) {
+            image1View.image = NSImage(contentsOf: fileURL1);
+        }
+        if FileManager.default.fileExists(atPath: fileURL2.path) {
+            image2View.image = NSImage(contentsOf: fileURL2);
+
+        }
+        
+
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
-//        let userDefaults = UserDefaults.standard;
-//
-//        studentName1 = userDefaults.string(forKey: studentName1key) ?? "website1";
-//        webSiteUrlString1 = userDefaults.string(forKey: webSiteUrlString1key) ?? "https://www.dundee.ac.uk";
-//
-//        studentName2 = userDefaults.string(forKey: studentName2key) ?? "website2";
-//        webSiteUrlString2 = userDefaults.string(forKey: webSiteUrlString2key) ?? "https://www.dundee.ac.uk";
         
         
     }
