@@ -109,7 +109,8 @@ class ViewController: NSViewController {
         print("student2 is \(studentName2)");
         print("website2 is \(webSiteUrlString2)");
         
-        print("prapere for segue \(segue.identifier!)");
+        let notSet = "Not Set"
+        print("prepare for segue \(segue.identifier ?? notSet)");
         let dest = segue.destinationController as! webViewController03;
         
         if (segue.identifier == "first") {
