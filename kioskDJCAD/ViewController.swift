@@ -115,7 +115,11 @@ class ViewController: NSViewController {
         if (segue.identifier == "first") {
             
             dest.destURLString = webSiteUrlString1;
+            
+            
+            //Test idea:
 
+//            dest.theCloseButton.removeFromSuperview();
         }
         else {
             // segue.identifier == "second"

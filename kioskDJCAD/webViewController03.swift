@@ -27,6 +27,7 @@ class webViewController03: NSViewController,WKUIDelegate {
 
     @IBOutlet weak var theWebView: WKWebView!
    
+    @IBOutlet weak var theCloseButton: NSButton!
     
     @IBAction func reloadPage(_ sender: NSButton) {
         print("reload ?");
@@ -74,6 +75,10 @@ class webViewController03: NSViewController,WKUIDelegate {
         super.viewDidLoad()
         // Do view setup here.
         
+        
+        //test
+        //TODO make this conditional on user preferences
+//        theCloseButton.removeFromSuperview();
 
         loadWebPage();
         
