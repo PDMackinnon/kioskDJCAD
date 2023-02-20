@@ -10,7 +10,13 @@ import Cocoa
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
 
+    override init() {
+            super.init()
 
+        let transformer = FileURLToImageTransformer()
+        ValueTransformer.setValueTransformer(transformer, forName: NSValueTransformerName("FileURLToImageTransformer"))
+        
+        }
 
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {

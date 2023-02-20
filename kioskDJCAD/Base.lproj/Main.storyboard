@@ -140,18 +140,18 @@
             <objects>
                 <viewController id="HCv-hY-xs1" customClass="PrefsController" customModule="kioskDJCAD" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="VIk-E2-vo9">
-                        <rect key="frame" x="0.0" y="0.0" width="854" height="371"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1009" height="799"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <customView id="s3r-eb-9oW">
-                                <rect key="frame" x="7" y="20" width="818" height="341"/>
+                                <rect key="frame" x="7" y="20" width="982" height="769"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <box fixedFrame="YES" borderType="line" title="First Website" translatesAutoresizingMaskIntoConstraints="NO" id="RQo-vR-wsi">
-                                        <rect key="frame" x="-3" y="218" width="824" height="103"/>
+                                        <rect key="frame" x="-3" y="646" width="968" height="103"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <view key="contentView" id="5Vg-aX-is0">
-                                            <rect key="frame" x="3" y="3" width="818" height="85"/>
+                                            <rect key="frame" x="3" y="3" width="962" height="85"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eJB-08-lCG">
@@ -172,7 +172,7 @@
                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                     </textFieldCell>
                                                     <connections>
-                                                        <binding destination="Jep-Sh-47A" name="value" keyPath="values.firstSiteURL" id="FwC-Z8-QVc"/>
+                                                        <binding destination="Jep-Sh-47A" name="value" keyPath="values.siteURL00" id="Tbr-Yg-Qkg"/>
                                                     </connections>
                                                 </textField>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jiw-BQ-GOu">
@@ -193,7 +193,7 @@
                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                     </textFieldCell>
                                                     <connections>
-                                                        <binding destination="Jep-Sh-47A" name="value" keyPath="values.firstSiteName" id="rpu-PW-FXx"/>
+                                                        <binding destination="Jep-Sh-47A" name="value" keyPath="values.siteName01" id="6WS-ob-ZgI"/>
                                                     </connections>
                                                 </textField>
                                                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pHg-Ch-0VO">
@@ -204,17 +204,28 @@
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>
                                                     <connections>
-                                                        <action selector="fileDialog1:" target="HCv-hY-xs1" id="pNd-b9-9Hb"/>
+                                                        <action selector="fileDialog:" target="HCv-hY-xs1" id="il7-vU-4c5"/>
+                                                    </connections>
+                                                </button>
+                                                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L5o-fp-6QK">
+                                                    <rect key="frame" x="836" y="19" width="60" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                    <buttonCell key="cell" type="check" title="Show" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="lQb-9C-Qzs">
+                                                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                        <font key="font" metaFont="system"/>
+                                                    </buttonCell>
+                                                    <connections>
+                                                        <binding destination="Jep-Sh-47A" name="value" keyPath="values.show01" id="7Nk-a9-1GS"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
                                         </view>
                                     </box>
                                     <box fixedFrame="YES" borderType="line" title="Second Website" translatesAutoresizingMaskIntoConstraints="NO" id="Jna-3p-wr4">
-                                        <rect key="frame" x="-3" y="111" width="824" height="103"/>
+                                        <rect key="frame" x="-3" y="539" width="968" height="103"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <view key="contentView" id="jQD-Kt-Xye">
-                                            <rect key="frame" x="3" y="3" width="818" height="85"/>
+                                            <rect key="frame" x="3" y="3" width="962" height="85"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kw1-Vu-Lac">
@@ -235,7 +246,7 @@
                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                     </textFieldCell>
                                                     <connections>
-                                                        <binding destination="Jep-Sh-47A" name="value" keyPath="values.secondSiteURL" id="jQI-s8-bTP"/>
+                                                        <binding destination="Jep-Sh-47A" name="value" keyPath="values.siteURL01" id="PYC-cj-fFs"/>
                                                     </connections>
                                                 </textField>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RIC-OW-dq0">
@@ -256,10 +267,10 @@
                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                     </textFieldCell>
                                                     <connections>
-                                                        <binding destination="Jep-Sh-47A" name="value" keyPath="values.secondSiteName" id="MRH-q3-dlB"/>
+                                                        <binding destination="Jep-Sh-47A" name="value" keyPath="values.siteName02" id="u9V-sj-9i7"/>
                                                     </connections>
                                                 </textField>
-                                                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7gf-wq-9yo">
+                                                <button verticalHuggingPriority="750" fixedFrame="YES" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="7gf-wq-9yo">
                                                     <rect key="frame" x="725" y="13" width="77" height="32"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <buttonCell key="cell" type="push" title="Image" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="cFZ-En-V94">
@@ -267,14 +278,25 @@
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>
                                                     <connections>
-                                                        <action selector="fileDialog2:" target="HCv-hY-xs1" id="FSF-r7-1ze"/>
+                                                        <action selector="fileDialog:" target="HCv-hY-xs1" id="cRq-Fb-LTS"/>
+                                                    </connections>
+                                                </button>
+                                                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ogA-Ck-7cB">
+                                                    <rect key="frame" x="836" y="19" width="60" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                    <buttonCell key="cell" type="check" title="Show" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="hJH-vh-9mq">
+                                                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                        <font key="font" metaFont="system"/>
+                                                    </buttonCell>
+                                                    <connections>
+                                                        <binding destination="Jep-Sh-47A" name="value" keyPath="values.show02" id="eT7-dI-Zkc"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
                                         </view>
                                     </box>
                                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3I9-Nx-fJv">
-                                        <rect key="frame" x="745" y="13" width="59" height="32"/>
+                                        <rect key="frame" x="752" y="13" width="59" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <buttonCell key="cell" type="push" title="OK" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ZOo-XV-PIX">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -287,6 +309,302 @@ DQ
                                             <action selector="doneEditOK:" target="HCv-hY-xs1" id="L4n-ej-bbq"/>
                                         </connections>
                                     </button>
+                                    <box fixedFrame="YES" borderType="line" title="third Website" translatesAutoresizingMaskIntoConstraints="NO" id="xcB-ij-KxK">
+                                        <rect key="frame" x="-3" y="424" width="968" height="103"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <view key="contentView" id="e1d-fe-Se7">
+                                            <rect key="frame" x="3" y="3" width="962" height="85"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H9z-v3-5HV">
+                                                    <rect key="frame" x="328" y="49" width="30" height="16"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                    <textFieldCell key="cell" lineBreakMode="clipping" title="URL" id="s4G-jf-gdX">
+                                                        <font key="font" metaFont="system"/>
+                                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    </textFieldCell>
+                                                </textField>
+                                                <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="21h-OH-664">
+                                                    <rect key="frame" x="330" y="20" width="390" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="y2i-N2-5bM">
+                                                        <font key="font" usesAppearanceFont="YES"/>
+                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    </textFieldCell>
+                                                    <connections>
+                                                        <binding destination="Jep-Sh-47A" name="value" keyPath="values.siteURL02" id="Aqi-p6-YpE"/>
+                                                    </connections>
+                                                </textField>
+                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HS3-d0-xaH">
+                                                    <rect key="frame" x="18" y="49" width="40" height="16"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                    <textFieldCell key="cell" lineBreakMode="clipping" title="Name" id="McZ-ln-HNV">
+                                                        <font key="font" metaFont="system"/>
+                                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    </textFieldCell>
+                                                </textField>
+                                                <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y1F-FO-q2e">
+                                                    <rect key="frame" x="20" y="20" width="267" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="h5a-Km-dIn">
+                                                        <font key="font" usesAppearanceFont="YES"/>
+                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    </textFieldCell>
+                                                    <connections>
+                                                        <binding destination="Jep-Sh-47A" name="value" keyPath="values.siteName03" id="QUt-wz-fVS"/>
+                                                    </connections>
+                                                </textField>
+                                                <button verticalHuggingPriority="750" fixedFrame="YES" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="vzE-k1-KVv">
+                                                    <rect key="frame" x="725" y="13" width="77" height="32"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                    <buttonCell key="cell" type="push" title="Image" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="KVl-1Z-saP">
+                                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                        <font key="font" metaFont="system"/>
+                                                    </buttonCell>
+                                                    <connections>
+                                                        <action selector="fileDialog:" target="HCv-hY-xs1" id="hw9-ry-C6h"/>
+                                                    </connections>
+                                                </button>
+                                                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dV6-YG-ohd">
+                                                    <rect key="frame" x="836" y="19" width="60" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                    <buttonCell key="cell" type="check" title="Show" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="k7w-sg-jiZ">
+                                                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                        <font key="font" metaFont="system"/>
+                                                    </buttonCell>
+                                                    <connections>
+                                                        <binding destination="Jep-Sh-47A" name="value" keyPath="values.show03" id="cTv-et-ccO"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </view>
+                                    </box>
+                                    <box fixedFrame="YES" borderType="line" title="forth Website" translatesAutoresizingMaskIntoConstraints="NO" id="Hih-oC-Ut2">
+                                        <rect key="frame" x="-3" y="317" width="968" height="103"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <view key="contentView" id="62e-oF-7Eq">
+                                            <rect key="frame" x="3" y="3" width="962" height="85"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gkI-qv-nyG">
+                                                    <rect key="frame" x="328" y="49" width="30" height="16"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                    <textFieldCell key="cell" lineBreakMode="clipping" title="URL" id="6tx-aQ-7w0">
+                                                        <font key="font" metaFont="system"/>
+                                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    </textFieldCell>
+                                                </textField>
+                                                <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kb4-r6-Rc9">
+                                                    <rect key="frame" x="330" y="20" width="390" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="76P-CH-GkV">
+                                                        <font key="font" usesAppearanceFont="YES"/>
+                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    </textFieldCell>
+                                                    <connections>
+                                                        <binding destination="Jep-Sh-47A" name="value" keyPath="values.siteURL03" id="yPN-UV-DU9"/>
+                                                    </connections>
+                                                </textField>
+                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gYo-aA-BjP">
+                                                    <rect key="frame" x="18" y="49" width="40" height="16"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                    <textFieldCell key="cell" lineBreakMode="clipping" title="Name" id="fe6-SJ-fEJ">
+                                                        <font key="font" metaFont="system"/>
+                                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    </textFieldCell>
+                                                </textField>
+                                                <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vfv-HZ-KXD">
+                                                    <rect key="frame" x="20" y="20" width="267" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="nFa-d8-3lP">
+                                                        <font key="font" usesAppearanceFont="YES"/>
+                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    </textFieldCell>
+                                                    <connections>
+                                                        <binding destination="Jep-Sh-47A" name="value" keyPath="values.siteName04" id="Abw-SX-7AC"/>
+                                                    </connections>
+                                                </textField>
+                                                <button verticalHuggingPriority="750" fixedFrame="YES" tag="3" translatesAutoresizingMaskIntoConstraints="NO" id="buh-K1-tuc">
+                                                    <rect key="frame" x="725" y="13" width="77" height="32"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                    <buttonCell key="cell" type="push" title="Image" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="esT-By-tg2">
+                                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                        <font key="font" metaFont="system"/>
+                                                    </buttonCell>
+                                                    <connections>
+                                                        <action selector="fileDialog:" target="HCv-hY-xs1" id="Fwp-iC-oNs"/>
+                                                    </connections>
+                                                </button>
+                                                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xke-Da-cEp">
+                                                    <rect key="frame" x="836" y="19" width="60" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                    <buttonCell key="cell" type="check" title="Show" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="9Kv-Xj-qky">
+                                                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                        <font key="font" metaFont="system"/>
+                                                    </buttonCell>
+                                                    <connections>
+                                                        <binding destination="Jep-Sh-47A" name="value" keyPath="values.show04" id="INI-A7-RQl"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </view>
+                                    </box>
+                                    <box fixedFrame="YES" borderType="line" title="Fifth Website" translatesAutoresizingMaskIntoConstraints="NO" id="xFj-AZ-SaZ">
+                                        <rect key="frame" x="-3" y="210" width="968" height="103"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <view key="contentView" id="hl4-Lw-AWP">
+                                            <rect key="frame" x="3" y="3" width="962" height="85"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sBb-Dp-DKK">
+                                                    <rect key="frame" x="328" y="49" width="30" height="16"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                    <textFieldCell key="cell" lineBreakMode="clipping" title="URL" id="0rJ-cJ-932">
+                                                        <font key="font" metaFont="system"/>
+                                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    </textFieldCell>
+                                                </textField>
+                                                <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cKo-EY-GZd">
+                                                    <rect key="frame" x="330" y="20" width="390" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="WPd-q2-0yQ">
+                                                        <font key="font" usesAppearanceFont="YES"/>
+                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    </textFieldCell>
+                                                    <connections>
+                                                        <binding destination="Jep-Sh-47A" name="value" keyPath="values.siteURL04" id="5RI-tb-vS8"/>
+                                                    </connections>
+                                                </textField>
+                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7go-kE-qAl">
+                                                    <rect key="frame" x="18" y="49" width="40" height="16"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                    <textFieldCell key="cell" lineBreakMode="clipping" title="Name" id="vrS-UV-kYX">
+                                                        <font key="font" metaFont="system"/>
+                                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    </textFieldCell>
+                                                </textField>
+                                                <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Iw-D2-ZAS">
+                                                    <rect key="frame" x="20" y="20" width="267" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="Yhc-hE-7c7">
+                                                        <font key="font" usesAppearanceFont="YES"/>
+                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    </textFieldCell>
+                                                    <connections>
+                                                        <binding destination="Jep-Sh-47A" name="value" keyPath="values.siteName05" id="QuW-KU-ZkL"/>
+                                                    </connections>
+                                                </textField>
+                                                <button verticalHuggingPriority="750" fixedFrame="YES" tag="4" translatesAutoresizingMaskIntoConstraints="NO" id="phe-vi-EjC">
+                                                    <rect key="frame" x="725" y="13" width="77" height="32"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                    <buttonCell key="cell" type="push" title="Image" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="UWw-Ei-dQ0">
+                                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                        <font key="font" metaFont="system"/>
+                                                    </buttonCell>
+                                                    <connections>
+                                                        <action selector="fileDialog:" target="HCv-hY-xs1" id="Jeu-QN-QJ0"/>
+                                                    </connections>
+                                                </button>
+                                                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wVY-Xx-o3V">
+                                                    <rect key="frame" x="836" y="19" width="60" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                    <buttonCell key="cell" type="check" title="Show" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="nbR-AL-i92">
+                                                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                        <font key="font" metaFont="system"/>
+                                                    </buttonCell>
+                                                    <connections>
+                                                        <binding destination="Jep-Sh-47A" name="value" keyPath="values.show05" id="sxZ-xJ-UlC"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </view>
+                                    </box>
+                                    <box fixedFrame="YES" borderType="line" title="Sixth Website" translatesAutoresizingMaskIntoConstraints="NO" id="ya2-G9-HcZ">
+                                        <rect key="frame" x="-3" y="103" width="968" height="103"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <view key="contentView" id="S2M-1k-09M">
+                                            <rect key="frame" x="3" y="3" width="962" height="85"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JBr-O5-at4">
+                                                    <rect key="frame" x="328" y="49" width="30" height="16"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                    <textFieldCell key="cell" lineBreakMode="clipping" title="URL" id="6PG-8q-wpT">
+                                                        <font key="font" metaFont="system"/>
+                                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    </textFieldCell>
+                                                </textField>
+                                                <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FER-Zt-YEW">
+                                                    <rect key="frame" x="330" y="20" width="390" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="rGm-0s-9hf">
+                                                        <font key="font" usesAppearanceFont="YES"/>
+                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    </textFieldCell>
+                                                    <connections>
+                                                        <binding destination="Jep-Sh-47A" name="value" keyPath="values.siteURL05" id="q4I-wJ-InZ"/>
+                                                    </connections>
+                                                </textField>
+                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VKX-Ks-Nfd">
+                                                    <rect key="frame" x="18" y="49" width="40" height="16"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                    <textFieldCell key="cell" lineBreakMode="clipping" title="Name" id="qi6-xk-mrc">
+                                                        <font key="font" metaFont="system"/>
+                                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    </textFieldCell>
+                                                </textField>
+                                                <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mhc-x3-owQ">
+                                                    <rect key="frame" x="20" y="20" width="267" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="p0o-i1-Svb">
+                                                        <font key="font" usesAppearanceFont="YES"/>
+                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    </textFieldCell>
+                                                    <connections>
+                                                        <binding destination="Jep-Sh-47A" name="value" keyPath="values.siteName06" id="RuM-d6-uMB"/>
+                                                    </connections>
+                                                </textField>
+                                                <button verticalHuggingPriority="750" fixedFrame="YES" tag="5" translatesAutoresizingMaskIntoConstraints="NO" id="FJo-IH-X4Q">
+                                                    <rect key="frame" x="725" y="13" width="77" height="32"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                    <buttonCell key="cell" type="push" title="Image" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Gli-DZ-Fep">
+                                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                        <font key="font" metaFont="system"/>
+                                                    </buttonCell>
+                                                    <connections>
+                                                        <action selector="fileDialog:" target="HCv-hY-xs1" id="day-j4-KeI"/>
+                                                    </connections>
+                                                </button>
+                                                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oYb-pR-7gl">
+                                                    <rect key="frame" x="836" y="19" width="60" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                    <buttonCell key="cell" type="check" title="Show" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="i05-Qa-h6U">
+                                                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                        <font key="font" metaFont="system"/>
+                                                    </buttonCell>
+                                                    <connections>
+                                                        <binding destination="Jep-Sh-47A" name="value" keyPath="values.show06" id="z8m-do-Wwd"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </view>
+                                    </box>
                                 </subviews>
                             </customView>
                         </subviews>
@@ -295,7 +613,7 @@ DQ
                 <customObject id="CIo-GY-zzn" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <userDefaultsController representsSharedInstance="YES" id="Jep-Sh-47A"/>
             </objects>
-            <point key="canvasLocation" x="-788" y="1197.5"/>
+            <point key="canvasLocation" x="-710.5" y="1411.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
@@ -308,7 +626,7 @@ DQ
                             <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="77" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fco-iG-qX8">
                                 <rect key="frame" x="-69" y="113" width="1318" height="577"/>
                                 <subviews>
-                                    <stackView distribution="fillEqually" orientation="horizontal" alignment="top" spacing="50" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Ki-1V-jxc">
+                                    <stackView distribution="equalSpacing" orientation="horizontal" alignment="top" spacing="50" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Ki-1V-jxc">
                                         <rect key="frame" x="0.0" y="327" width="1318" height="250"/>
                                         <subviews>
                                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="SFH-RD-LJg">
@@ -321,15 +639,24 @@ DQ
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" size="20" name="Helvetica"/>
                                                     <connections>
-                                                        <binding destination="4Aa-QU-DFe" name="title" keyPath="values.secondSiteName" id="GPk-lm-GvS"/>
+                                                        <binding destination="4Aa-QU-DFe" name="image" keyPath="values.fileURL00" id="8k6-GJ-efH">
+                                                            <dictionary key="options">
+                                                                <string key="NSValueTransformerName">FileURLToImageTransformer</string>
+                                                            </dictionary>
+                                                        </binding>
+                                                        <binding destination="4Aa-QU-DFe" name="title" keyPath="values.siteName01" previousBinding="8k6-GJ-efH" id="piS-VW-kjU"/>
                                                     </connections>
                                                 </buttonCell>
                                                 <connections>
-                                                    <binding destination="Jep-Sh-47A" name="title" keyPath="values" id="Rmx-Vp-WhJ"/>
+                                                    <binding destination="cvm-vy-kNO" name="hidden" keyPath="values.show01" id="l46-bZ-MGX">
+                                                        <dictionary key="options">
+                                                            <string key="NSValueTransformerName">NSNegateBoolean</string>
+                                                        </dictionary>
+                                                    </binding>
                                                     <segue destination="w7y-b1-ycp" kind="modal" id="6BU-fq-ciF"/>
                                                 </connections>
                                             </button>
-                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wAF-s3-EAC">
+                                            <button verticalHuggingPriority="750" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="wAF-s3-EAC">
                                                 <rect key="frame" x="456" y="0.0" width="406" height="250"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="250" id="W6Y-ib-mgu"/>
@@ -339,14 +666,24 @@ DQ
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" size="20" name="Helvetica"/>
                                                     <connections>
-                                                        <binding destination="4Aa-QU-DFe" name="title" keyPath="values.firstSiteName" id="iP7-Ba-9kE"/>
+                                                        <binding destination="4Aa-QU-DFe" name="image" keyPath="values.fileURL01" id="J71-d1-xax">
+                                                            <dictionary key="options">
+                                                                <string key="NSValueTransformerName">FileURLToImageTransformer</string>
+                                                            </dictionary>
+                                                        </binding>
+                                                        <binding destination="4Aa-QU-DFe" name="title" keyPath="values.siteName02" previousBinding="J71-d1-xax" id="qsa-87-xyt"/>
                                                     </connections>
                                                 </buttonCell>
                                                 <connections>
+                                                    <binding destination="cvm-vy-kNO" name="hidden" keyPath="values.show02" id="tA3-Sg-8U8">
+                                                        <dictionary key="options">
+                                                            <string key="NSValueTransformerName">NSNegateBoolean</string>
+                                                        </dictionary>
+                                                    </binding>
                                                     <segue destination="w7y-b1-ycp" kind="modal" identifier="first" id="5zz-NP-2Lf"/>
                                                 </connections>
                                             </button>
-                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="M4p-Hp-czd">
+                                            <button verticalHuggingPriority="750" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="M4p-Hp-czd">
                                                 <rect key="frame" x="912" y="0.0" width="406" height="250"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="cxG-X0-Ros"/>
@@ -356,11 +693,20 @@ DQ
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" size="20" name="Helvetica"/>
                                                     <connections>
-                                                        <binding destination="4Aa-QU-DFe" name="title" keyPath="values.secondSiteName" id="56Q-9U-9cB"/>
+                                                        <binding destination="4Aa-QU-DFe" name="image" keyPath="values.fileURL02" id="iRt-eP-6vh">
+                                                            <dictionary key="options">
+                                                                <string key="NSValueTransformerName">FileURLToImageTransformer</string>
+                                                            </dictionary>
+                                                        </binding>
+                                                        <binding destination="4Aa-QU-DFe" name="title" keyPath="values.siteName03" previousBinding="iRt-eP-6vh" id="Tkg-o3-aPq"/>
                                                     </connections>
                                                 </buttonCell>
                                                 <connections>
-                                                    <binding destination="Jep-Sh-47A" name="title" keyPath="values" id="C3m-Ay-WSu"/>
+                                                    <binding destination="4Aa-QU-DFe" name="hidden" keyPath="values.show03" id="iQc-CW-inO">
+                                                        <dictionary key="options">
+                                                            <string key="NSValueTransformerName">NSNegateBoolean</string>
+                                                        </dictionary>
+                                                    </binding>
                                                     <segue destination="w7y-b1-ycp" kind="modal" identifier="second" id="X4i-VZ-djO"/>
                                                 </connections>
                                             </button>
@@ -379,7 +725,7 @@ DQ
                                     <stackView distribution="fillEqually" orientation="horizontal" alignment="top" spacing="50" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cxy-KJ-QOb">
                                         <rect key="frame" x="0.0" y="0.0" width="1318" height="250"/>
                                         <subviews>
-                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tQ4-ea-Gdo">
+                                            <button verticalHuggingPriority="750" tag="3" translatesAutoresizingMaskIntoConstraints="NO" id="tQ4-ea-Gdo">
                                                 <rect key="frame" x="0.0" y="0.0" width="406" height="250"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="250" id="1dP-oJ-G7G"/>
@@ -389,15 +735,24 @@ DQ
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" size="20" name="Helvetica"/>
                                                     <connections>
-                                                        <binding destination="4Aa-QU-DFe" name="title" keyPath="values.secondSiteName" id="lzq-rJ-H2e"/>
+                                                        <binding destination="4Aa-QU-DFe" name="image" keyPath="values.fileURL03" id="Ueq-1i-H54">
+                                                            <dictionary key="options">
+                                                                <string key="NSValueTransformerName">FileURLToImageTransformer</string>
+                                                            </dictionary>
+                                                        </binding>
+                                                        <binding destination="4Aa-QU-DFe" name="title" keyPath="values.siteName04" previousBinding="Ueq-1i-H54" id="ECf-KB-sJl"/>
                                                     </connections>
                                                 </buttonCell>
                                                 <connections>
-                                                    <binding destination="Jep-Sh-47A" name="title" keyPath="values" id="pnX-nz-PXb"/>
+                                                    <binding destination="cvm-vy-kNO" name="hidden" keyPath="values.show04" id="Z04-W5-Gqy">
+                                                        <dictionary key="options">
+                                                            <string key="NSValueTransformerName">NSNegateBoolean</string>
+                                                        </dictionary>
+                                                    </binding>
                                                     <segue destination="w7y-b1-ycp" kind="modal" id="Q9B-pM-1Ad"/>
                                                 </connections>
                                             </button>
-                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wec-YA-gsp">
+                                            <button verticalHuggingPriority="750" tag="4" translatesAutoresizingMaskIntoConstraints="NO" id="wec-YA-gsp">
                                                 <rect key="frame" x="456" y="0.0" width="406" height="250"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="250" id="DaF-lD-xNy"/>
@@ -407,14 +762,24 @@ DQ
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" size="20" name="Helvetica"/>
                                                     <connections>
-                                                        <binding destination="4Aa-QU-DFe" name="title" keyPath="values.firstSiteName" id="dnd-db-s3m"/>
+                                                        <binding destination="4Aa-QU-DFe" name="image" keyPath="values.fileURL04" id="X7g-I3-0BC">
+                                                            <dictionary key="options">
+                                                                <string key="NSValueTransformerName">FileURLToImageTransformer</string>
+                                                            </dictionary>
+                                                        </binding>
+                                                        <binding destination="4Aa-QU-DFe" name="title" keyPath="values.siteName05" previousBinding="X7g-I3-0BC" id="Rri-fh-FJg"/>
                                                     </connections>
                                                 </buttonCell>
                                                 <connections>
+                                                    <binding destination="cvm-vy-kNO" name="hidden" keyPath="values.show05" id="Nbv-lH-uxl">
+                                                        <dictionary key="options">
+                                                            <string key="NSValueTransformerName">NSNegateBoolean</string>
+                                                        </dictionary>
+                                                    </binding>
                                                     <segue destination="w7y-b1-ycp" kind="modal" id="MTb-qo-F0G"/>
                                                 </connections>
                                             </button>
-                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IlE-Xs-RrZ">
+                                            <button verticalHuggingPriority="750" tag="5" translatesAutoresizingMaskIntoConstraints="NO" id="IlE-Xs-RrZ">
                                                 <rect key="frame" x="912" y="0.0" width="406" height="250"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="2cj-iX-Rb3"/>
@@ -424,11 +789,20 @@ DQ
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" size="20" name="Helvetica"/>
                                                     <connections>
-                                                        <binding destination="4Aa-QU-DFe" name="title" keyPath="values.secondSiteName" id="eRd-hh-bMF"/>
+                                                        <binding destination="4Aa-QU-DFe" name="image" keyPath="values.fileURL05" id="gST-T9-o6L">
+                                                            <dictionary key="options">
+                                                                <string key="NSValueTransformerName">FileURLToImageTransformer</string>
+                                                            </dictionary>
+                                                        </binding>
+                                                        <binding destination="4Aa-QU-DFe" name="title" keyPath="values.siteName06" previousBinding="gST-T9-o6L" id="r3r-lr-69Q"/>
                                                     </connections>
                                                 </buttonCell>
                                                 <connections>
-                                                    <binding destination="Jep-Sh-47A" name="title" keyPath="values" id="Zzw-kp-ebC"/>
+                                                    <binding destination="cvm-vy-kNO" name="hidden" keyPath="values.show06" id="D9Z-Bi-1Zh">
+                                                        <dictionary key="options">
+                                                            <string key="NSValueTransformerName">NSNegateBoolean</string>
+                                                        </dictionary>
+                                                    </binding>
                                                     <segue destination="w7y-b1-ycp" kind="modal" id="h2u-h3-Jx6"/>
                                                 </connections>
                                             </button>
@@ -467,6 +841,7 @@ DQ
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <userDefaultsController id="4Aa-QU-DFe"/>
+                <userDefaultsController id="cvm-vy-kNO"/>
             </objects>
             <point key="canvasLocation" x="436" y="1093"/>
         </scene>
@@ -555,7 +930,7 @@ DQ
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="5zz-NP-2Lf"/>
+        <segue reference="6BU-fq-ciF"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="cat400x400" width="400" height="400"/>

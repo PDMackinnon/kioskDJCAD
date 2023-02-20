@@ -28,7 +28,10 @@ class ViewController: NSViewController {
     private let userImgFile1key = "firstFileURL";
     private let userImgFile2key = "secondFileURL";
 
-
+    
+    
+    
+    private let webSiteUrlKeys = ["siteURL00","siteURL01","siteURL02","siteURL03","siteURL04","siteURL05",]
     
     override func viewDidAppear() {
         super.viewDidAppear()
@@ -41,43 +44,9 @@ class ViewController: NSViewController {
             };
         }
 
-        
-        imagesUpdate();
-        
-    }
+    }//end view did appear
     
-    func imagesUpdate() {
-        
-        // load images for students if chosen in preferences
-        
-        let userDefaults = UserDefaults.standard;
-        
-        
-        if let fileURL1 = userDefaults.url(forKey: userImgFile1key) {
-            print(fileURL1.path);
-            if FileManager.default.fileExists(atPath: fileURL1.path) {
-//                image1View.image = NSImage(contentsOf: fileURL1);
-                
-                imgButton1.image = NSImage(contentsOf: fileURL1);
-                
-            }//end if file exists
-        }//end if let optional
-        
-
-        
-        
-        
-        if let fileURL2 = userDefaults.url(forKey: userImgFile2key) {
-            print(fileURL2.path);
-            if FileManager.default.fileExists(atPath: fileURL2.path) {
-//                image2View.image = NSImage(contentsOf: fileURL2);
-                imgButton2.image = NSImage(contentsOf: fileURL2);
-                } //end if file exists
-        } //end if let optional
-        
-
-        
-    }
+ 
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -93,42 +62,51 @@ class ViewController: NSViewController {
         // Update the view, if already loaded.
         }
     }
+    
+    
     override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
         
         let userDefaults = UserDefaults.standard;
         
-        studentName1 = userDefaults.string(forKey: studentName1key) ?? "website1";
+//        studentName1 = userDefaults.string(forKey: studentName1key) ?? "website1";
         webSiteUrlString1 = userDefaults.string(forKey: webSiteUrlString1key) ?? "https://www.dundee.ac.uk";
         
-        studentName2 = userDefaults.string(forKey: studentName2key) ?? "website2";
+//        studentName2 = userDefaults.string(forKey: studentName2key) ?? "website2";
         webSiteUrlString2 = userDefaults.string(forKey: webSiteUrlString2key) ?? "https://www.dundee.ac.uk";
         
-        print("student1 is \(studentName1)");
-        print("website1 is \(webSiteUrlString1)");
-
-        print("student2 is \(studentName2)");
-        print("website2 is \(webSiteUrlString2)");
+        guard
+        let tag = (sender as? NSButton)?.tag
+            else {return}
+        
+        
+        
+        let webSiteUrlString = userDefaults.string(forKey: webSiteUrlKeys[tag]) ?? "https://www.dundee.ac.uk";
+        
         
         let notSet = "Not Set"
         print("prepare for segue \(segue.identifier ?? notSet)");
+        
         let dest = segue.destinationController as! webViewController03;
         
-        if (segue.identifier == "first") {
-            
-            dest.destURLString = webSiteUrlString1;
-            
-            
-            //Test idea:
+        dest.destURLString = webSiteUrlString;
 
-//            dest.theCloseButton.removeFromSuperview();
-        }
-        else {
-            // segue.identifier == "second"
-            
-            
-            dest.destURLString = webSiteUrlString2;
-
-        }
+        
+        
+        
+//        if (segue.identifier == "first") {
+//
+//            dest.destURLString = webSiteUrlString1;
+//
+//            //Test idea:
+////            dest.theCloseButton.removeFromSuperview();
+//        }
+//        else {
+//            // segue.identifier == "second"
+//
+//
+//            dest.destURLString = webSiteUrlString2;
+//
+//        }
         
         
         

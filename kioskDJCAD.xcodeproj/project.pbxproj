@@ -14,6 +14,7 @@
 		F925BA86282BE6AD005C298C /* webViewController03.swift in Sources */ = {isa = PBXBuildFile; fileRef = F925BA85282BE6AD005C298C /* webViewController03.swift */; };
 		F925BA8D282C0DFD005C298C /* PrefsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F925BA8B282C0DFD005C298C /* PrefsController.swift */; };
 		F925BAA8282D432A005C298C /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F925BAA7282D432A005C298C /* WebKit.framework */; };
+		F925D8EA29A397FB007B0FC0 /* FileURLToImageTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F925D8E929A397FB007B0FC0 /* FileURLToImageTransformer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		F925BA85282BE6AD005C298C /* webViewController03.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = webViewController03.swift; sourceTree = "<group>"; };
 		F925BA8B282C0DFD005C298C /* PrefsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefsController.swift; sourceTree = "<group>"; };
 		F925BAA7282D432A005C298C /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		F925D8E929A397FB007B0FC0 /* FileURLToImageTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileURLToImageTransformer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				F925BA72282BBAE2005C298C /* Main.storyboard */,
 				F925BA75282BBAE2005C298C /* Info.plist */,
 				F925BA76282BBAE2005C298C /* kioskDJCAD.entitlements */,
+				F925D8E929A397FB007B0FC0 /* FileURLToImageTransformer.swift */,
 				F925BA8B282C0DFD005C298C /* PrefsController.swift */,
 			);
 			path = kioskDJCAD;
@@ -154,6 +157,7 @@
 				F925BA6F282BBAD5005C298C /* ViewController.swift in Sources */,
 				F925BA86282BE6AD005C298C /* webViewController03.swift in Sources */,
 				F925BA6D282BBAD5005C298C /* AppDelegate.swift in Sources */,
+				F925D8EA29A397FB007B0FC0 /* FileURLToImageTransformer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
