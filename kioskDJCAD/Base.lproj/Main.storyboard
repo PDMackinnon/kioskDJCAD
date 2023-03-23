@@ -613,27 +613,34 @@ DQ
                 <customObject id="CIo-GY-zzn" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <userDefaultsController representsSharedInstance="YES" id="Jep-Sh-47A"/>
             </objects>
-            <point key="canvasLocation" x="-710.5" y="1411.5"/>
+            <point key="canvasLocation" x="-1491" y="1452"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="kioskDJCAD" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="1180" height="802"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <subviews>
-                            <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="77" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fco-iG-qX8">
-                                <rect key="frame" x="-69" y="113" width="1318" height="577"/>
+                            <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="100" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fco-iG-qX8">
+                                <rect key="frame" x="110" y="40" width="1700" height="1000"/>
                                 <subviews>
-                                    <stackView distribution="equalSpacing" orientation="horizontal" alignment="top" spacing="50" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Ki-1V-jxc">
-                                        <rect key="frame" x="0.0" y="327" width="1318" height="250"/>
+                                    <stackView distribution="equalSpacing" orientation="horizontal" alignment="centerY" spacing="100" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Ki-1V-jxc">
+                                        <rect key="frame" x="0.0" y="550" width="1700" height="450"/>
                                         <subviews>
-                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="SFH-RD-LJg">
-                                                <rect key="frame" x="0.0" y="0.0" width="406" height="250"/>
+                                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="zzY-p7-zL3">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="450"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="250" id="Q7A-An-e57"/>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="f8M-Xp-kAK"/>
+                                                    <constraint firstAttribute="width" constant="50" id="7nz-wq-y2k"/>
+                                                    <constraint firstAttribute="height" constant="450" id="eh5-1J-xCN"/>
+                                                </constraints>
+                                            </customView>
+                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="SFH-RD-LJg">
+                                                <rect key="frame" x="150" y="0.0" width="400" height="450"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="450" id="Q7A-An-e57"/>
+                                                    <constraint firstAttribute="width" constant="400" id="f8M-Xp-kAK"/>
                                                 </constraints>
                                                 <buttonCell key="cell" type="square" title="WebSite 3" bezelStyle="shadowlessSquare" image="cat400x400" imagePosition="above" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="M3M-Yz-nlp">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -653,14 +660,14 @@ DQ
                                                             <string key="NSValueTransformerName">NSNegateBoolean</string>
                                                         </dictionary>
                                                     </binding>
-                                                    <segue destination="w7y-b1-ycp" kind="modal" id="6BU-fq-ciF"/>
+                                                    <segue destination="w7y-b1-ycp" kind="show" id="6BU-fq-ciF"/>
                                                 </connections>
                                             </button>
                                             <button verticalHuggingPriority="750" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="wAF-s3-EAC">
-                                                <rect key="frame" x="456" y="0.0" width="406" height="250"/>
+                                                <rect key="frame" x="650" y="0.0" width="400" height="450"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="250" id="W6Y-ib-mgu"/>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="kbC-vl-hI3"/>
+                                                    <constraint firstAttribute="height" constant="450" id="W6Y-ib-mgu"/>
+                                                    <constraint firstAttribute="width" constant="400" id="kbC-vl-hI3"/>
                                                 </constraints>
                                                 <buttonCell key="cell" type="square" title="WebSite 1" bezelStyle="shadowlessSquare" image="doggie400x400" imagePosition="above" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Gpf-xL-1Hl">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -680,14 +687,14 @@ DQ
                                                             <string key="NSValueTransformerName">NSNegateBoolean</string>
                                                         </dictionary>
                                                     </binding>
-                                                    <segue destination="w7y-b1-ycp" kind="modal" identifier="first" id="5zz-NP-2Lf"/>
+                                                    <segue destination="w7y-b1-ycp" kind="show" identifier="first" id="5zz-NP-2Lf"/>
                                                 </connections>
                                             </button>
                                             <button verticalHuggingPriority="750" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="M4p-Hp-czd">
-                                                <rect key="frame" x="912" y="0.0" width="406" height="250"/>
+                                                <rect key="frame" x="1150" y="0.0" width="400" height="450"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="cxG-X0-Ros"/>
-                                                    <constraint firstAttribute="height" constant="250" id="oJc-jr-rr9"/>
+                                                    <constraint firstAttribute="width" constant="400" id="cxG-X0-Ros"/>
+                                                    <constraint firstAttribute="height" constant="450" id="oJc-jr-rr9"/>
                                                 </constraints>
                                                 <buttonCell key="cell" type="square" title="WebSite 2" bezelStyle="shadowlessSquare" image="cat400x400" imagePosition="above" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="w21-hQ-Mve">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -707,11 +714,20 @@ DQ
                                                             <string key="NSValueTransformerName">NSNegateBoolean</string>
                                                         </dictionary>
                                                     </binding>
-                                                    <segue destination="w7y-b1-ycp" kind="modal" identifier="second" id="X4i-VZ-djO"/>
+                                                    <segue destination="w7y-b1-ycp" kind="show" identifier="second" id="X4i-VZ-djO"/>
                                                 </connections>
                                             </button>
+                                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="b2f-mz-UHO">
+                                                <rect key="frame" x="1650" y="0.0" width="50" height="450"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="Fqb-qD-DVz"/>
+                                                    <constraint firstAttribute="height" constant="450" id="WmV-LC-ASb"/>
+                                                </constraints>
+                                            </customView>
                                         </subviews>
                                         <visibilityPriorities>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
                                             <integer value="1000"/>
                                             <integer value="1000"/>
                                             <integer value="1000"/>
@@ -720,16 +736,25 @@ DQ
                                             <real value="3.4028234663852886e+38"/>
                                             <real value="3.4028234663852886e+38"/>
                                             <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
                                         </customSpacing>
                                     </stackView>
-                                    <stackView distribution="fillEqually" orientation="horizontal" alignment="top" spacing="50" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cxy-KJ-QOb">
-                                        <rect key="frame" x="0.0" y="0.0" width="1318" height="250"/>
+                                    <stackView distribution="equalSpacing" orientation="horizontal" alignment="centerY" spacing="100" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cxy-KJ-QOb">
+                                        <rect key="frame" x="0.0" y="0.0" width="1700" height="450"/>
                                         <subviews>
-                                            <button verticalHuggingPriority="750" tag="3" translatesAutoresizingMaskIntoConstraints="NO" id="tQ4-ea-Gdo">
-                                                <rect key="frame" x="0.0" y="0.0" width="406" height="250"/>
+                                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="fhc-QU-pcw">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="450"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="250" id="1dP-oJ-G7G"/>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="Sp5-ZM-t7l"/>
+                                                    <constraint firstAttribute="height" constant="450" id="8fF-Qo-6GQ"/>
+                                                    <constraint firstAttribute="width" constant="50" id="pbz-eH-NYz"/>
+                                                </constraints>
+                                            </customView>
+                                            <button verticalHuggingPriority="750" tag="3" translatesAutoresizingMaskIntoConstraints="NO" id="tQ4-ea-Gdo">
+                                                <rect key="frame" x="150" y="0.0" width="400" height="450"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="450" id="1dP-oJ-G7G"/>
+                                                    <constraint firstAttribute="width" constant="400" id="Sp5-ZM-t7l"/>
                                                 </constraints>
                                                 <buttonCell key="cell" type="square" title="WebSite 3" bezelStyle="shadowlessSquare" image="cat400x400" imagePosition="above" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3yj-pG-3nh">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -749,14 +774,14 @@ DQ
                                                             <string key="NSValueTransformerName">NSNegateBoolean</string>
                                                         </dictionary>
                                                     </binding>
-                                                    <segue destination="w7y-b1-ycp" kind="modal" id="Q9B-pM-1Ad"/>
+                                                    <segue destination="w7y-b1-ycp" kind="show" id="Q9B-pM-1Ad"/>
                                                 </connections>
                                             </button>
                                             <button verticalHuggingPriority="750" tag="4" translatesAutoresizingMaskIntoConstraints="NO" id="wec-YA-gsp">
-                                                <rect key="frame" x="456" y="0.0" width="406" height="250"/>
+                                                <rect key="frame" x="650" y="0.0" width="400" height="450"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="250" id="DaF-lD-xNy"/>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="DcU-uq-del"/>
+                                                    <constraint firstAttribute="height" constant="450" id="DaF-lD-xNy"/>
+                                                    <constraint firstAttribute="width" constant="400" id="DcU-uq-del"/>
                                                 </constraints>
                                                 <buttonCell key="cell" type="square" title="WebSite 1" bezelStyle="shadowlessSquare" image="doggie400x400" imagePosition="above" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3bv-kM-OMR">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -776,14 +801,14 @@ DQ
                                                             <string key="NSValueTransformerName">NSNegateBoolean</string>
                                                         </dictionary>
                                                     </binding>
-                                                    <segue destination="w7y-b1-ycp" kind="modal" id="MTb-qo-F0G"/>
+                                                    <segue destination="w7y-b1-ycp" kind="show" id="MTb-qo-F0G"/>
                                                 </connections>
                                             </button>
                                             <button verticalHuggingPriority="750" tag="5" translatesAutoresizingMaskIntoConstraints="NO" id="IlE-Xs-RrZ">
-                                                <rect key="frame" x="912" y="0.0" width="406" height="250"/>
+                                                <rect key="frame" x="1150" y="0.0" width="400" height="450"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="2cj-iX-Rb3"/>
-                                                    <constraint firstAttribute="height" constant="250" id="Y8w-i9-H83"/>
+                                                    <constraint firstAttribute="width" constant="400" id="2cj-iX-Rb3"/>
+                                                    <constraint firstAttribute="height" constant="450" id="Y8w-i9-H83"/>
                                                 </constraints>
                                                 <buttonCell key="cell" type="square" title="WebSite 2" bezelStyle="shadowlessSquare" image="cat400x400" imagePosition="above" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="dFg-mz-iy5">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -803,16 +828,27 @@ DQ
                                                             <string key="NSValueTransformerName">NSNegateBoolean</string>
                                                         </dictionary>
                                                     </binding>
-                                                    <segue destination="w7y-b1-ycp" kind="modal" id="h2u-h3-Jx6"/>
+                                                    <segue destination="w7y-b1-ycp" kind="show" id="h2u-h3-Jx6"/>
                                                 </connections>
                                             </button>
+                                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="BS4-bu-mJf">
+                                                <rect key="frame" x="1650" y="0.0" width="50" height="450"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="A6h-5u-qSH"/>
+                                                    <constraint firstAttribute="height" constant="450" id="XLZ-99-Dyz"/>
+                                                </constraints>
+                                            </customView>
                                         </subviews>
                                         <visibilityPriorities>
                                             <integer value="1000"/>
                                             <integer value="1000"/>
                                             <integer value="1000"/>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
                                         </visibilityPriorities>
                                         <customSpacing>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
                                             <real value="3.4028234663852886e+38"/>
                                             <real value="3.4028234663852886e+38"/>
                                             <real value="3.4028234663852886e+38"/>
@@ -842,8 +878,9 @@ DQ
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <userDefaultsController id="4Aa-QU-DFe"/>
                 <userDefaultsController id="cvm-vy-kNO"/>
+                <userDefaultsController id="7RS-AD-Dc3"/>
             </objects>
-            <point key="canvasLocation" x="436" y="1093"/>
+            <point key="canvasLocation" x="331" y="1261"/>
         </scene>
         <!--View Controller 1-->
         <scene sceneID="yfr-i9-2rN">

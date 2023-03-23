@@ -15,6 +15,7 @@
 		F925BA8D282C0DFD005C298C /* PrefsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F925BA8B282C0DFD005C298C /* PrefsController.swift */; };
 		F925BAA8282D432A005C298C /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F925BAA7282D432A005C298C /* WebKit.framework */; };
 		F925D8EA29A397FB007B0FC0 /* FileURLToImageTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F925D8E929A397FB007B0FC0 /* FileURLToImageTransformer.swift */; };
+		F9C81E8A29CC9B9A0023A4C2 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F9C81E8929CC9B9A0023A4C2 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		F925BA8B282C0DFD005C298C /* PrefsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefsController.swift; sourceTree = "<group>"; };
 		F925BAA7282D432A005C298C /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		F925D8E929A397FB007B0FC0 /* FileURLToImageTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileURLToImageTransformer.swift; sourceTree = "<group>"; };
+		F9C81E8929CC9B9A0023A4C2 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				F925BA85282BE6AD005C298C /* webViewController03.swift */,
 				F925BA6C282BBAD5005C298C /* AppDelegate.swift */,
 				F925BA6E282BBAD5005C298C /* ViewController.swift */,
+				F9C81E8929CC9B9A0023A4C2 /* .gitignore */,
 				F925BA70282BBAE2005C298C /* Assets.xcassets */,
 				F925BA72282BBAE2005C298C /* Main.storyboard */,
 				F925BA75282BBAE2005C298C /* Info.plist */,
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F925BA71282BBAE2005C298C /* Assets.xcassets in Resources */,
+				F9C81E8A29CC9B9A0023A4C2 /* .gitignore in Resources */,
 				F925BA74282BBAE2005C298C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,6 +304,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4Z7DB3ADJ6;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = kioskDJCAD/Info.plist;
@@ -307,7 +312,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.4;
+				MARKETING_VERSION = 1.73;
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.paulmackinnon.kioskDJCAD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -323,6 +328,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4Z7DB3ADJ6;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = kioskDJCAD/Info.plist;
@@ -330,7 +336,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.4;
+				MARKETING_VERSION = 1.73;
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.paulmackinnon.kioskDJCAD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
