@@ -10,10 +10,15 @@ import Cocoa
 class ViewController: NSViewController {
     
 
+    @IBOutlet weak var spacerTLeft: NSView!
+    @IBOutlet weak var spacerTRight: NSView!
+    @IBOutlet weak var spacerBLeft: NSView!
+    @IBOutlet weak var spacerBRight: NSView!
     
     
     @IBOutlet weak var imgButton1: NSButton!
     @IBOutlet weak var imgButton2: NSButton!
+    @IBOutlet weak var imgButton3: NSButton!
     
     var studentName1 = "";
     var studentName2 = "";
@@ -43,15 +48,51 @@ class ViewController: NSViewController {
                 
             };
         }
-
+        
+        
     }//end view did appear
     
+    /*
+     
+     // Set the boolean value
+     let defaults = UserDefaults.standard
+     defaults.set(true, forKey: "isHidden")
+
+     // Bind the boolean value to your NSView's hidden property using Cocoa bindings
+     yourNSView.bind(NSBindingName(rawValue: "hidden"), to: defaults, withKeyPath: "isHidden", options: nil)
+     
+     */
  
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let transformer = ValueTransformer(forName: NSValueTransformerName(rawValue: "AndTransformer"))!
+        print("transformer: \(transformer)")
+        print("transformer.allowsReverseTransformation: \(String(describing: AndTransformer.allowsReverseTransformation))")
+        print("transformer.transformedValueClass: \(String(describing: AndTransformer.transformedValueClass))")
+        print("transformer.transformedValue([imgButton1,imgButton2,imgButton3]): \(String(describing: transformer.transformedValue([imgButton1.isHidden,imgButton2.isHidden,imgButton3.isHidden])))")
+        
         // Do any additional setup after loading the view.
+        
+//        let bindingOptions = [NSBindingOption.valueTransformerName//: AndTransformer]
+        
+        
+        //   let bindingOptions= [NSBindingOption.valueTransformerNameBindingOption: NSValueTransformerName.AndTransformerName]
+        
+      //  myTextField.bind(NSValueBinding, to: myObject, withKeyPath: "myValue", options: [NSValueTransformerNameBindingOption: "MyValueTransformer"])
+        
+
+        
+//        spacerTLeft.bind(NSBindingName(rawValue: "hidden"), to:  [imgButton1,imgButton2,imgButton3], withKeyPath: "isHidden", options: [NSBindingOption.valueTransformerName:"AndTransformer"])
+        
+      //  spacerTLeft.bind(NSBindingName(rawValue: "hidden"), to: [imgButton1,imgButton2,imgButton3], withKeyPath: "hidden", options: bindingOptions)
+        
+        /*
+         
+         otherNSView2.bind(NSBindingName(rawValue: "hidden"), toObjects: [yourNSView, otherNSView1], withKeyPaths:["hidden", "hidden"], options:[bindingOptions])
+         
+         */
         
         
         

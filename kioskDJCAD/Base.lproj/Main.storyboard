@@ -629,12 +629,37 @@ DQ
                                     <stackView distribution="equalSpacing" orientation="horizontal" alignment="centerY" spacing="100" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Ki-1V-jxc">
                                         <rect key="frame" x="0.0" y="550" width="1700" height="450"/>
                                         <subviews>
-                                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="zzY-p7-zL3">
+                                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="zzY-p7-zL3" userLabel="spacerTopLeft">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="450"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="7nz-wq-y2k"/>
                                                     <constraint firstAttribute="height" constant="450" id="eh5-1J-xCN"/>
                                                 </constraints>
+                                                <connections>
+                                                    <binding destination="7RS-AD-Dc3" name="hidden2" keyPath="values.show02" previousBinding="ChJ-0X-TcW" id="xdN-Xy-10c">
+                                                        <dictionary key="options">
+                                                            <integer key="NSMultipleValuesPlaceholder" value="-1"/>
+                                                            <integer key="NSNoSelectionPlaceholder" value="-1"/>
+                                                            <integer key="NSNotApplicablePlaceholder" value="-1"/>
+                                                            <integer key="NSNullPlaceholder" value="-1"/>
+                                                            <string key="NSValueTransformerName">NSNegateBoolean</string>
+                                                        </dictionary>
+                                                    </binding>
+                                                    <binding destination="7RS-AD-Dc3" name="hidden3" keyPath="values.show03" previousBinding="xdN-Xy-10c" id="ibY-6Z-9hj">
+                                                        <dictionary key="options">
+                                                            <integer key="NSMultipleValuesPlaceholder" value="-1"/>
+                                                            <integer key="NSNoSelectionPlaceholder" value="-1"/>
+                                                            <integer key="NSNotApplicablePlaceholder" value="-1"/>
+                                                            <integer key="NSNullPlaceholder" value="-1"/>
+                                                            <string key="NSValueTransformerName">NSNegateBoolean</string>
+                                                        </dictionary>
+                                                    </binding>
+                                                    <binding destination="7RS-AD-Dc3" name="hidden" keyPath="values.show01" id="ChJ-0X-TcW">
+                                                        <dictionary key="options">
+                                                            <string key="NSValueTransformerName">NSNegateBoolean</string>
+                                                        </dictionary>
+                                                    </binding>
+                                                </connections>
                                             </customView>
                                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="SFH-RD-LJg">
                                                 <rect key="frame" x="150" y="0.0" width="400" height="450"/>
@@ -717,12 +742,37 @@ DQ
                                                     <segue destination="w7y-b1-ycp" kind="show" identifier="second" id="X4i-VZ-djO"/>
                                                 </connections>
                                             </button>
-                                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="b2f-mz-UHO">
+                                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="b2f-mz-UHO" userLabel="spacerTopRight">
                                                 <rect key="frame" x="1650" y="0.0" width="50" height="450"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="Fqb-qD-DVz"/>
                                                     <constraint firstAttribute="height" constant="450" id="WmV-LC-ASb"/>
                                                 </constraints>
+                                                <connections>
+                                                    <binding destination="7RS-AD-Dc3" name="hidden2" keyPath="values.show02" previousBinding="Pdc-Gq-yb5" id="QrA-0q-5kN">
+                                                        <dictionary key="options">
+                                                            <integer key="NSMultipleValuesPlaceholder" value="-1"/>
+                                                            <integer key="NSNoSelectionPlaceholder" value="-1"/>
+                                                            <integer key="NSNotApplicablePlaceholder" value="-1"/>
+                                                            <integer key="NSNullPlaceholder" value="-1"/>
+                                                            <string key="NSValueTransformerName">NSNegateBoolean</string>
+                                                        </dictionary>
+                                                    </binding>
+                                                    <binding destination="7RS-AD-Dc3" name="hidden3" keyPath="values.show03" previousBinding="QrA-0q-5kN" id="Yve-fY-mf1">
+                                                        <dictionary key="options">
+                                                            <integer key="NSMultipleValuesPlaceholder" value="-1"/>
+                                                            <integer key="NSNoSelectionPlaceholder" value="-1"/>
+                                                            <integer key="NSNotApplicablePlaceholder" value="-1"/>
+                                                            <integer key="NSNullPlaceholder" value="-1"/>
+                                                            <string key="NSValueTransformerName">NSNegateBoolean</string>
+                                                        </dictionary>
+                                                    </binding>
+                                                    <binding destination="7RS-AD-Dc3" name="hidden" keyPath="values.show01" id="Pdc-Gq-yb5">
+                                                        <dictionary key="options">
+                                                            <string key="NSValueTransformerName">NSNegateBoolean</string>
+                                                        </dictionary>
+                                                    </binding>
+                                                </connections>
                                             </customView>
                                         </subviews>
                                         <visibilityPriorities>
@@ -743,12 +793,37 @@ DQ
                                     <stackView distribution="equalSpacing" orientation="horizontal" alignment="centerY" spacing="100" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cxy-KJ-QOb">
                                         <rect key="frame" x="0.0" y="0.0" width="1700" height="450"/>
                                         <subviews>
-                                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="fhc-QU-pcw">
+                                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="fhc-QU-pcw" userLabel="spacerBottomLeft">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="450"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="450" id="8fF-Qo-6GQ"/>
                                                     <constraint firstAttribute="width" constant="50" id="pbz-eH-NYz"/>
                                                 </constraints>
+                                                <connections>
+                                                    <binding destination="7RS-AD-Dc3" name="hidden2" keyPath="values.show05" previousBinding="g6a-Nh-Bbc" id="kLf-z4-3m1">
+                                                        <dictionary key="options">
+                                                            <integer key="NSMultipleValuesPlaceholder" value="-1"/>
+                                                            <integer key="NSNoSelectionPlaceholder" value="-1"/>
+                                                            <integer key="NSNotApplicablePlaceholder" value="-1"/>
+                                                            <integer key="NSNullPlaceholder" value="-1"/>
+                                                            <string key="NSValueTransformerName">NSNegateBoolean</string>
+                                                        </dictionary>
+                                                    </binding>
+                                                    <binding destination="7RS-AD-Dc3" name="hidden3" keyPath="values.show06" previousBinding="kLf-z4-3m1" id="HcW-wD-Hsa">
+                                                        <dictionary key="options">
+                                                            <integer key="NSMultipleValuesPlaceholder" value="-1"/>
+                                                            <integer key="NSNoSelectionPlaceholder" value="-1"/>
+                                                            <integer key="NSNotApplicablePlaceholder" value="-1"/>
+                                                            <integer key="NSNullPlaceholder" value="-1"/>
+                                                            <string key="NSValueTransformerName">NSNegateBoolean</string>
+                                                        </dictionary>
+                                                    </binding>
+                                                    <binding destination="7RS-AD-Dc3" name="hidden" keyPath="values.show04" id="g6a-Nh-Bbc">
+                                                        <dictionary key="options">
+                                                            <string key="NSValueTransformerName">NSNegateBoolean</string>
+                                                        </dictionary>
+                                                    </binding>
+                                                </connections>
                                             </customView>
                                             <button verticalHuggingPriority="750" tag="3" translatesAutoresizingMaskIntoConstraints="NO" id="tQ4-ea-Gdo">
                                                 <rect key="frame" x="150" y="0.0" width="400" height="450"/>
@@ -831,12 +906,37 @@ DQ
                                                     <segue destination="w7y-b1-ycp" kind="show" id="h2u-h3-Jx6"/>
                                                 </connections>
                                             </button>
-                                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="BS4-bu-mJf">
+                                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="BS4-bu-mJf" userLabel="spacerBottomRight">
                                                 <rect key="frame" x="1650" y="0.0" width="50" height="450"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="A6h-5u-qSH"/>
                                                     <constraint firstAttribute="height" constant="450" id="XLZ-99-Dyz"/>
                                                 </constraints>
+                                                <connections>
+                                                    <binding destination="7RS-AD-Dc3" name="hidden2" keyPath="values.show05" previousBinding="P0H-eg-agM" id="F6I-wA-LbL">
+                                                        <dictionary key="options">
+                                                            <integer key="NSMultipleValuesPlaceholder" value="-1"/>
+                                                            <integer key="NSNoSelectionPlaceholder" value="-1"/>
+                                                            <integer key="NSNotApplicablePlaceholder" value="-1"/>
+                                                            <integer key="NSNullPlaceholder" value="-1"/>
+                                                            <string key="NSValueTransformerName">NSNegateBoolean</string>
+                                                        </dictionary>
+                                                    </binding>
+                                                    <binding destination="7RS-AD-Dc3" name="hidden3" keyPath="values.show06" previousBinding="F6I-wA-LbL" id="Wgy-dE-d4B">
+                                                        <dictionary key="options">
+                                                            <integer key="NSMultipleValuesPlaceholder" value="-1"/>
+                                                            <integer key="NSNoSelectionPlaceholder" value="-1"/>
+                                                            <integer key="NSNotApplicablePlaceholder" value="-1"/>
+                                                            <integer key="NSNullPlaceholder" value="-1"/>
+                                                            <string key="NSValueTransformerName">NSNegateBoolean</string>
+                                                        </dictionary>
+                                                    </binding>
+                                                    <binding destination="7RS-AD-Dc3" name="hidden" keyPath="values.show04" id="P0H-eg-agM">
+                                                        <dictionary key="options">
+                                                            <string key="NSValueTransformerName">NSNegateBoolean</string>
+                                                        </dictionary>
+                                                    </binding>
+                                                </connections>
                                             </customView>
                                         </subviews>
                                         <visibilityPriorities>
@@ -873,6 +973,11 @@ DQ
                     <connections>
                         <outlet property="imgButton1" destination="wAF-s3-EAC" id="Goc-Mx-0Yv"/>
                         <outlet property="imgButton2" destination="M4p-Hp-czd" id="pvN-qc-hYq"/>
+                        <outlet property="imgButton3" destination="SFH-RD-LJg" id="Nq4-5v-8pd"/>
+                        <outlet property="spacerBLeft" destination="fhc-QU-pcw" id="q4h-Y5-57z"/>
+                        <outlet property="spacerBRight" destination="BS4-bu-mJf" id="8qW-De-ReI"/>
+                        <outlet property="spacerTLeft" destination="zzY-p7-zL3" id="MrW-ad-PC3"/>
+                        <outlet property="spacerTRight" destination="b2f-mz-UHO" id="JRR-8N-mxE"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

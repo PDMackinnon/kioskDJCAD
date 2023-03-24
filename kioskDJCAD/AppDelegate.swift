@@ -16,6 +16,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let transformer = FileURLToImageTransformer()
         ValueTransformer.setValueTransformer(transformer, forName: NSValueTransformerName("FileURLToImageTransformer"))
         
+        let andTransformer = AndTransformer()
+        ValueTransformer.setValueTransformer(andTransformer, forName: NSValueTransformerName("AndTransformer"))
+        
         }
 
 
