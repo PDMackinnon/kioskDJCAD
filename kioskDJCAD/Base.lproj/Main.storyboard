@@ -52,6 +52,39 @@
                                     </items>
                                 </menu>
                             </menuItem>
+                            <menuItem title="Edit" id="7gH-01-l9w">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Edit" id="jWq-V4-Wll">
+                                    <items>
+                                        <menuItem title="Cut" keyEquivalent="x" id="P51-gz-ztA">
+                                            <connections>
+                                                <action selector="cut:" target="Ady-hI-5gd" id="GEx-hp-Y44"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Copy" keyEquivalent="c" id="1ym-el-qGR">
+                                            <connections>
+                                                <action selector="copy:" target="Ady-hI-5gd" id="7uZ-0p-0wq"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Paste" keyEquivalent="v" id="yt4-7j-ofl">
+                                            <connections>
+                                                <action selector="paste:" target="Ady-hI-5gd" id="HlY-nq-aTX"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Delete" id="ygT-CB-C47">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="delete:" target="Ady-hI-5gd" id="Z2T-dg-CwJ"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Select All" keyEquivalent="a" id="3q2-EY-9Ya">
+                                            <connections>
+                                                <action selector="selectAll:" target="Ady-hI-5gd" id="12e-ek-NL8"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
                             <menuItem title="View" id="H8h-7b-M4v">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="View" id="HyV-fh-RgO">
@@ -83,22 +116,6 @@
                                         <menuItem isSeparatorItem="YES" id="eu3-7i-yIM"/>
                                     </items>
                                 </menu>
-                            </menuItem>
-                            <menuItem title="Help" id="wpr-3q-Mcd">
-                                <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="Help" systemMenu="help" id="F2S-fz-NVQ">
-                                    <items>
-                                        <menuItem title="kioskDJCAD Help" keyEquivalent="?" id="FKE-Sm-Kum">
-                                            <connections>
-                                                <action selector="showHelp:" target="Ady-hI-5gd" id="y7X-2Q-9no"/>
-                                            </connections>
-                                        </menuItem>
-                                    </items>
-                                </menu>
-                            </menuItem>
-                            <menuItem title="Debug" id="7lg-2y-bgD">
-                                <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="Debug" id="0Cz-6x-pQa"/>
                             </menuItem>
                         </items>
                     </menu>
