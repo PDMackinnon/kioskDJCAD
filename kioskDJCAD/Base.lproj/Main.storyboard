@@ -697,12 +697,12 @@ DQ
                                                     </connections>
                                                 </buttonCell>
                                                 <connections>
+                                                    <action selector="OpenInBrowser:" target="XfG-lQ-9wD" id="DE7-4y-qs3"/>
                                                     <binding destination="cvm-vy-kNO" name="hidden" keyPath="values.show01" id="l46-bZ-MGX">
                                                         <dictionary key="options">
                                                             <string key="NSValueTransformerName">NSNegateBoolean</string>
                                                         </dictionary>
                                                     </binding>
-                                                    <segue destination="w7y-b1-ycp" kind="show" id="6BU-fq-ciF"/>
                                                 </connections>
                                             </button>
                                             <button verticalHuggingPriority="750" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="wAF-s3-EAC">
@@ -724,12 +724,12 @@ DQ
                                                     </connections>
                                                 </buttonCell>
                                                 <connections>
+                                                    <action selector="OpenInBrowser:" target="XfG-lQ-9wD" id="wpA-cZ-k6P"/>
                                                     <binding destination="cvm-vy-kNO" name="hidden" keyPath="values.show02" id="tA3-Sg-8U8">
                                                         <dictionary key="options">
                                                             <string key="NSValueTransformerName">NSNegateBoolean</string>
                                                         </dictionary>
                                                     </binding>
-                                                    <segue destination="w7y-b1-ycp" kind="show" identifier="first" id="5zz-NP-2Lf"/>
                                                 </connections>
                                             </button>
                                             <button verticalHuggingPriority="750" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="M4p-Hp-czd">
@@ -751,12 +751,12 @@ DQ
                                                     </connections>
                                                 </buttonCell>
                                                 <connections>
+                                                    <action selector="OpenInBrowser:" target="XfG-lQ-9wD" id="Ugg-tT-YBs"/>
                                                     <binding destination="4Aa-QU-DFe" name="hidden" keyPath="values.show03" id="iQc-CW-inO">
                                                         <dictionary key="options">
                                                             <string key="NSValueTransformerName">NSNegateBoolean</string>
                                                         </dictionary>
                                                     </binding>
-                                                    <segue destination="w7y-b1-ycp" kind="show" identifier="second" id="X4i-VZ-djO"/>
                                                 </connections>
                                             </button>
                                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="b2f-mz-UHO" userLabel="spacerTopRight">
@@ -814,12 +814,12 @@ DQ
                                                     </connections>
                                                 </buttonCell>
                                                 <connections>
+                                                    <action selector="OpenInBrowser:" target="XfG-lQ-9wD" id="EoS-uj-5tH"/>
                                                     <binding destination="cvm-vy-kNO" name="hidden" keyPath="values.show04" id="Z04-W5-Gqy">
                                                         <dictionary key="options">
                                                             <string key="NSValueTransformerName">NSNegateBoolean</string>
                                                         </dictionary>
                                                     </binding>
-                                                    <segue destination="w7y-b1-ycp" kind="show" id="Q9B-pM-1Ad"/>
                                                 </connections>
                                             </button>
                                             <button verticalHuggingPriority="750" tag="4" translatesAutoresizingMaskIntoConstraints="NO" id="wec-YA-gsp">
@@ -841,12 +841,12 @@ DQ
                                                     </connections>
                                                 </buttonCell>
                                                 <connections>
+                                                    <action selector="OpenInBrowser:" target="XfG-lQ-9wD" id="dhA-4B-72q"/>
                                                     <binding destination="cvm-vy-kNO" name="hidden" keyPath="values.show05" id="Nbv-lH-uxl">
                                                         <dictionary key="options">
                                                             <string key="NSValueTransformerName">NSNegateBoolean</string>
                                                         </dictionary>
                                                     </binding>
-                                                    <segue destination="w7y-b1-ycp" kind="show" id="MTb-qo-F0G"/>
                                                 </connections>
                                             </button>
                                             <button verticalHuggingPriority="750" tag="5" translatesAutoresizingMaskIntoConstraints="NO" id="IlE-Xs-RrZ">
@@ -868,12 +868,12 @@ DQ
                                                     </connections>
                                                 </buttonCell>
                                                 <connections>
+                                                    <action selector="OpenInBrowser:" target="XfG-lQ-9wD" id="HhN-BJ-aZn"/>
                                                     <binding destination="cvm-vy-kNO" name="hidden" keyPath="values.show06" id="D9Z-Bi-1Zh">
                                                         <dictionary key="options">
                                                             <string key="NSValueTransformerName">NSNegateBoolean</string>
                                                         </dictionary>
                                                     </binding>
-                                                    <segue destination="w7y-b1-ycp" kind="show" id="h2u-h3-Jx6"/>
                                                 </connections>
                                             </button>
                                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="BS4-bu-mJf" userLabel="spacerBottomRight">
@@ -962,10 +962,10 @@ DQ
                                 </connections>
                             </wkWebView>
                             <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="32" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Egx-8W-4Gw">
-                                <rect key="frame" x="5" y="544" width="264" height="36"/>
+                                <rect key="frame" x="5" y="544" width="266" height="36"/>
                                 <subviews>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ndc-DA-WgQ" userLabel="Close Button">
-                                        <rect key="frame" x="1" y="1" width="69" height="32"/>
+                                        <rect key="frame" x="1" y="1" width="70" height="32"/>
                                         <buttonCell key="cell" type="push" title="Close" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="S9p-iQ-fg6">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -975,7 +975,7 @@ DQ
                                         </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lHr-CY-1Ea" userLabel="Reload button">
-                                        <rect key="frame" x="88" y="1" width="76" height="32"/>
+                                        <rect key="frame" x="89" y="1" width="76" height="32"/>
                                         <buttonCell key="cell" type="push" title="Reload" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="fBl-Fv-x1K">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -985,7 +985,7 @@ DQ
                                         </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ubh-LD-b2Z" userLabel="Refresh  button">
-                                        <rect key="frame" x="182" y="1" width="81" height="32"/>
+                                        <rect key="frame" x="183" y="1" width="82" height="32"/>
                                         <buttonCell key="cell" type="push" title="Refresh" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="keZ-fE-3Bp">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -1027,9 +1027,6 @@ DQ
             <point key="canvasLocation" x="1800" y="1021"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="MTb-qo-F0G"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="cat400x400" width="400" height="400"/>
         <image name="doggie400x400" width="400" height="400"/>

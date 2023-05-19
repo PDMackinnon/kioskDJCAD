@@ -41,13 +41,13 @@ class ViewController: NSViewController {
     override func viewDidAppear() {
         super.viewDidAppear()
         
-        if let window = self.view.window {
-            if (!(window.styleMask == NSWindow.StyleMask.fullScreen) ) {
-                
-                window.toggleFullScreen(self);
-                
-            };
-        }
+//        if let window = self.view.window {
+//            if (!(window.styleMask == NSWindow.StyleMask.fullScreen) ) {
+//
+//                window.toggleFullScreen(self);
+//
+//            };
+//        }
         
         
     }//end view did appear
@@ -131,27 +131,33 @@ class ViewController: NSViewController {
         
         dest.destURLString = webSiteUrlString;
 
-        
-        
-        
-//        if (segue.identifier == "first") {
-//
-//            dest.destURLString = webSiteUrlString1;
-//
-//            //Test idea:
-////            dest.theCloseButton.removeFromSuperview();
-//        }
-//        else {
-//            // segue.identifier == "second"
-//
-//
-//            dest.destURLString = webSiteUrlString2;
-//
-//        }
-        
-        
-        
     }
+    
+    @IBAction func OpenInBrowser(_ sender: NSButton) {
+            
+        let userDefaults = UserDefaults.standard;
+        
+//        studentName1 = userDefaults.string(forKey: studentName1key) ?? "website1";
+//        webSiteUrlString1 = userDefaults.string(forKey: webSiteUrlString1key) ?? "https://www.dundee.ac.uk";
+        
+//        studentName2 = userDefaults.string(forKey: studentName2key) ?? "website2";
+//        webSiteUrlString2 = userDefaults.string(forKey: webSiteUrlString2key) ?? "https://www.dundee.ac.uk";
+        
+        guard
+        let tag = (sender as? NSButton)?.tag
+            else {return}
+        
+        
+        
+        let webSiteUrlString = userDefaults.string(forKey: webSiteUrlKeys[tag]) ?? "https://www.dundee.ac.uk";
+        
+        guard let url = URL(string: webSiteUrlString) else {return}
+        NSWorkspace.shared.open(url);
+  
+        
+
+    }
+    
     
 
 }
