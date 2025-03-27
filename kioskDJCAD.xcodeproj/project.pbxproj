@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		841304042D8C63B5009414AF /* PrefsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841304032D8C63B5009414AF /* PrefsDetailViewController.swift */; };
+		848E64152D8832F900C61F1C /* TableTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E64142D8832F900C61F1C /* TableTestVC.swift */; };
+		848E64192D88654800C61F1C /* kioskModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 848E64172D88654800C61F1C /* kioskModel.xcdatamodeld */; };
+		848E641C2D88665700C61F1C /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E641B2D88665700C61F1C /* DataManager.swift */; };
+		84FBC1E12D91676300C68896 /* CollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FBC1E02D91676300C68896 /* CollectionVC.swift */; };
+		84FBC1E42D9167E400C68896 /* MyCollectionViewItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84FBC1E32D9167E400C68896 /* MyCollectionViewItem.xib */; };
+		84FBC1EA2D9168C300C68896 /* MyCollectionViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FBC1E62D9168A200C68896 /* MyCollectionViewItem.swift */; };
 		F925BA6D282BBAD5005C298C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F925BA6C282BBAD5005C298C /* AppDelegate.swift */; };
 		F925BA6F282BBAD5005C298C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F925BA6E282BBAD5005C298C /* ViewController.swift */; };
 		F925BA71282BBAE2005C298C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F925BA70282BBAE2005C298C /* Assets.xcassets */; };
@@ -16,10 +23,19 @@
 		F925D8EA29A397FB007B0FC0 /* FileURLToImageTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F925D8E929A397FB007B0FC0 /* FileURLToImageTransformer.swift */; };
 		F9C81E8A29CC9B9A0023A4C2 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F9C81E8929CC9B9A0023A4C2 /* .gitignore */; };
 		F9C81E8D29CCA39E0023A4C2 /* AndTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C81E8C29CCA39E0023A4C2 /* AndTransformer.swift */; };
+		F9C8F8FE2D955381004B6DCF /* LaunchItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C8F8FC2D955381004B6DCF /* LaunchItem+CoreDataClass.swift */; };
+		F9C8F8FF2D955381004B6DCF /* LaunchItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C8F8FD2D955381004B6DCF /* LaunchItem+CoreDataProperties.swift */; };
 		F9E11CD82A13C71500B78118 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F925BAA7282D432A005C298C /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		841304032D8C63B5009414AF /* PrefsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefsDetailViewController.swift; sourceTree = "<group>"; };
+		848E64142D8832F900C61F1C /* TableTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableTestVC.swift; sourceTree = "<group>"; };
+		848E64182D88654800C61F1C /* kioskModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = kioskModel.xcdatamodel; sourceTree = "<group>"; };
+		848E641B2D88665700C61F1C /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		84FBC1E02D91676300C68896 /* CollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionVC.swift; sourceTree = "<group>"; };
+		84FBC1E32D9167E400C68896 /* MyCollectionViewItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCollectionViewItem.xib; sourceTree = "<group>"; };
+		84FBC1E62D9168A200C68896 /* MyCollectionViewItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCollectionViewItem.swift; sourceTree = "<group>"; };
 		F925BA69282BBAD5005C298C /* kioskDJCAD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kioskDJCAD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F925BA6C282BBAD5005C298C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F925BA6E282BBAD5005C298C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -33,6 +49,8 @@
 		F925D8E929A397FB007B0FC0 /* FileURLToImageTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileURLToImageTransformer.swift; sourceTree = "<group>"; };
 		F9C81E8929CC9B9A0023A4C2 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
 		F9C81E8C29CCA39E0023A4C2 /* AndTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AndTransformer.swift; sourceTree = "<group>"; };
+		F9C8F8FC2D955381004B6DCF /* LaunchItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "LaunchItem+CoreDataClass.swift"; path = "kioskDJCAD/LaunchItem+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F9C8F8FD2D955381004B6DCF /* LaunchItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "LaunchItem+CoreDataProperties.swift"; path = "kioskDJCAD/LaunchItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +68,8 @@
 		F925BA60282BBAD5005C298C = {
 			isa = PBXGroup;
 			children = (
+				F9C8F8FC2D955381004B6DCF /* LaunchItem+CoreDataClass.swift */,
+				F9C8F8FD2D955381004B6DCF /* LaunchItem+CoreDataProperties.swift */,
 				F925BA6B282BBAD5005C298C /* kioskDJCAD */,
 				F925BA6A282BBAD5005C298C /* Products */,
 				F925BAA6282D432A005C298C /* Frameworks */,
@@ -73,11 +93,18 @@
 				F9C81E8929CC9B9A0023A4C2 /* .gitignore */,
 				F925BA70282BBAE2005C298C /* Assets.xcassets */,
 				F925BA72282BBAE2005C298C /* Main.storyboard */,
+				84FBC1E02D91676300C68896 /* CollectionVC.swift */,
+				84FBC1E62D9168A200C68896 /* MyCollectionViewItem.swift */,
+				84FBC1E32D9167E400C68896 /* MyCollectionViewItem.xib */,
+				841304032D8C63B5009414AF /* PrefsDetailViewController.swift */,
+				F925BA8B282C0DFD005C298C /* PrefsController.swift */,
+				848E64142D8832F900C61F1C /* TableTestVC.swift */,
 				F925BA75282BBAE2005C298C /* Info.plist */,
 				F925BA76282BBAE2005C298C /* kioskDJCAD.entitlements */,
 				F925D8E929A397FB007B0FC0 /* FileURLToImageTransformer.swift */,
-				F925BA8B282C0DFD005C298C /* PrefsController.swift */,
 				F9C81E8C29CCA39E0023A4C2 /* AndTransformer.swift */,
+				848E64172D88654800C61F1C /* kioskModel.xcdatamodeld */,
+				848E641B2D88665700C61F1C /* DataManager.swift */,
 			);
 			path = kioskDJCAD;
 			sourceTree = "<group>";
@@ -148,6 +175,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F925BA71282BBAE2005C298C /* Assets.xcassets in Resources */,
+				84FBC1E42D9167E400C68896 /* MyCollectionViewItem.xib in Resources */,
 				F9C81E8A29CC9B9A0023A4C2 /* .gitignore in Resources */,
 				F925BA74282BBAE2005C298C /* Main.storyboard in Resources */,
 			);
@@ -160,11 +188,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9C8F8FE2D955381004B6DCF /* LaunchItem+CoreDataClass.swift in Sources */,
 				F925BA8D282C0DFD005C298C /* PrefsController.swift in Sources */,
+				848E64192D88654800C61F1C /* kioskModel.xcdatamodeld in Sources */,
+				84FBC1E12D91676300C68896 /* CollectionVC.swift in Sources */,
+				841304042D8C63B5009414AF /* PrefsDetailViewController.swift in Sources */,
+				848E64152D8832F900C61F1C /* TableTestVC.swift in Sources */,
 				F925BA6F282BBAD5005C298C /* ViewController.swift in Sources */,
 				F925BA86282BE6AD005C298C /* webViewController03.swift in Sources */,
 				F9C81E8D29CCA39E0023A4C2 /* AndTransformer.swift in Sources */,
+				F9C8F8FF2D955381004B6DCF /* LaunchItem+CoreDataProperties.swift in Sources */,
 				F925BA6D282BBAD5005C298C /* AppDelegate.swift in Sources */,
+				84FBC1EA2D9168C300C68896 /* MyCollectionViewItem.swift in Sources */,
+				848E641C2D88665700C61F1C /* DataManager.swift in Sources */,
 				F925D8EA29A397FB007B0FC0 /* FileURLToImageTransformer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -316,7 +352,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.92b;
+				MARKETING_VERSION = 2.0a;
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.paulmackinnon.kioskDJCAD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -340,7 +376,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.92b;
+				MARKETING_VERSION = 2.0a;
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.paulmackinnon.kioskDJCAD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -369,6 +405,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		848E64172D88654800C61F1C /* kioskModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				848E64182D88654800C61F1C /* kioskModel.xcdatamodel */,
+			);
+			currentVersion = 848E64182D88654800C61F1C /* kioskModel.xcdatamodel */;
+			path = kioskModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F925BA61282BBAD5005C298C /* Project object */;
 }

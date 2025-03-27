@@ -9,17 +9,28 @@ import Cocoa
 
 class PrefsController: NSViewController {
     
-    
-    private let userImgFilekeys = ["fileURL00","fileURL01","fileURL02","fileURL03","fileURL04","fileURL05","fileURL06","fileURL07"];
 
-    private let userImgFile1key = "firstFileURL";
-    private let userImgFile2key = "secondFileURL";
+    @objc dynamic var context:NSManagedObjectContext {
+        return  DataManager.shared.managedObjectContext
+        
+    }
     
 
+    @IBOutlet weak var tableView: NSTableView!
+    
+    @IBOutlet weak var arrayController: NSArrayController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
     }
+    
+//test only:
+//    func numberOfRows(in tableView: NSTableView) -> Int {
+//        10
+//    }
+    
+    
     
     @IBAction func doneEditOK(_ sender: NSButton) {
         if let window = self.view.window {
@@ -27,58 +38,38 @@ class PrefsController: NSViewController {
             window.makeFirstResponder(sender);
 
             window.close();
-            
-            
         }
         
-        
         print("done");
-        
+        DataManager.shared.saveContext()
     }
 
     
-    
-    @IBAction func fileDialog(_ sender: NSButton) {
-        let userDefaults = UserDefaults.standard;
-        let tag = sender.tag
+
+    @IBAction func editDialog(_ sender: NSButton) {
         
-        let p = NSOpenPanel();
-        p.begin(completionHandler: {(r) -> Void in
-            if r == NSApplication.ModalResponse.OK {
-                let tempFileURL = p.url ?? URL(fileURLWithPath: "dunno");
-                
-                userDefaults.set(tempFileURL, forKey:self.userImgFilekeys[tag]);
-                print(self.userImgFilekeys[tag])
-            }
-        })
+        
+        
     }
     
+    override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
+        if let detailVC = segue.destinationController as? PrefsDetailViewController {
+            if let button = sender as? NSButton {
+                let row = tableView.row(for: button)
+                if row >= 0, let items = arrayController.arrangedObjects as? [LaunchItem], row < items.count {
+                    //edit an existing item
+                    detailVC.launchItem = items[row]
+                } else {
+                    // create a new item in this case
+//                    let newItem = NSEntityDescription.insertNewObject(forEntityName: "LaunchItem", into: context)
+                    let newItem = LaunchItem(context: context)
+                    detailVC.launchItem = newItem
+                    detailVC.isNewItem = true
+                }
+            }
+        }// end if
+    }
     
-//    @IBAction func fileDialog1(_ sender: NSButton) {
-//        let userDefaults = UserDefaults.standard;
-//        
-//        let p = NSOpenPanel();
-//        p.begin(completionHandler: {(r) -> Void in
-//            if r == NSApplication.ModalResponse.OK {
-//                let tempFileURL = p.url ?? URL(fileURLWithPath: "dunno");
-//                
-//                userDefaults.set(tempFileURL, forKey:self.userImgFile1key);
-//            }
-//        })
-//    }
-//    
-//    @IBAction func fileDialog2(_ sender: NSButton) {
-//        let userDefaults = UserDefaults.standard;
-//        
-//        let p = NSOpenPanel();
-//        p.begin(completionHandler: {(r) -> Void in
-//            if r == NSApplication.ModalResponse.OK {
-//                let tempFileURL = p.url ?? URL(fileURLWithPath: "dunno");
-//                
-//                userDefaults.set(tempFileURL, forKey:self.userImgFile2key);
-//            }
-//        })
-//    }
-//    
+
     
-}
+}// end class pref controller

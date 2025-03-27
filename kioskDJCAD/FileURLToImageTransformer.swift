@@ -13,7 +13,7 @@ class FileURLToImageTransformer: ValueTransformer {
     }
 
     override class func allowsReverseTransformation() -> Bool {
-        return true
+        return false
     }
 
     override func transformedValue(_ value: Any?) -> Any? {

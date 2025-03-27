@@ -17,8 +17,20 @@ class webViewController03: NSViewController,WKUIDelegate {
             if (!window.isZoomed) {
                 window.zoom(self);
             };
+            
+            
+            //****
+ //           test this is correct ?
+            //****
+            if (!(window.styleMask == NSWindow.StyleMask.fullScreen) ) {
+
+                window.toggleFullScreen(self);
+
+            };
         }
 
+        
+        
     }
     
     
