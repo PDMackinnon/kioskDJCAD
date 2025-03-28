@@ -8,7 +8,7 @@
 import Foundation
 import Cocoa
 
-class collectionVC: NSViewController, NSCollectionViewDataSource, NSCollectionViewDelegate, NSCollectionViewDelegateFlowLayout, MyCollectionViewItemDelegate  {
+class collectionVC: NSViewController, NSCollectionViewDataSource, NSCollectionViewDelegate, NSCollectionViewDelegateFlowLayout, MyCollectionViewItemDelegate, NSFetchedResultsControllerDelegate  {
     func collectionViewItem(_ item: MyCollectionViewItem, didRequestInternalLaunchWith url: URL) {
         performSegue(withIdentifier: "showWebView", sender: url)
     }
@@ -48,31 +48,58 @@ class collectionVC: NSViewController, NSCollectionViewDataSource, NSCollectionVi
     
     var items:[LaunchItem] = []
     
-    func fetchItems() {
+    var fetchedResultsController:NSFetchedResultsController<LaunchItem>!
+    
+    
+    func setupFetchedResultsController() {
         let request:NSFetchRequest<LaunchItem> = LaunchItem.fetchRequest()
+        request.sortDescriptors = [NSSortDescriptor(key:"displayName",ascending: true)]
+        
+        fetchedResultsController = NSFetchedResultsController(
+            fetchRequest: request,
+            managedObjectContext: DataManager.shared.managedObjectContext,
+            sectionNameKeyPath: nil,
+            cacheName: nil)
+        
+        fetchedResultsController.delegate = self
+        
         do {
-            items = try context.fetch(request)
-            collectionView.reloadData()
+//            items = try context.fetch(request)
+            try fetchedResultsController.performFetch()
+//            collectionView.reloadData()
         } catch {
             print("failed to fetch items: \(error)")
             
         }//end catch
     } //end func fetch items
     
+    func controllerDidChangeContent(_ controller:NSFetchedResultsController<NSFetchRequestResult>) {
+        collectionView.reloadData()
+    }
+    
+    func numberOfSections(in collectionView: NSCollectionView) -> Int {
+        return 1
+    }
     
     func collectionView(_ collectionView: NSCollectionView, numberOfItemsInSection section: Int) -> Int {
-        return items.count
+        return fetchedResultsController.fetchedObjects?.count ?? 0
     }
     
     func collectionView(_ collectionView: NSCollectionView, itemForRepresentedObjectAt indexPath: IndexPath) -> NSCollectionViewItem {
         let item = collectionView.makeItem(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "CollectionViewItem"), for: indexPath)
         
-        if let collectionViewItem = item as? MyCollectionViewItem {
-                collectionViewItem.configure(with: items[indexPath.item])
-            collectionViewItem.delegate = self
-            
-            return collectionViewItem
-            }
+        if let launchItem = fetchedResultsController.fetchedObjects?[indexPath.item] {
+            (item as? MyCollectionViewItem)?.configure(with: launchItem)
+            (item as? MyCollectionViewItem)?.delegate = self
+        }
+        
+//        if let collectionViewItem = item as? MyCollectionViewItem {
+//                collectionViewItem.configure(with: items[indexPath.item])
+//            collectionViewItem.delegate = self
+//
+//            return collectionViewItem
+//            }
+        
             return item
     }
     
@@ -103,7 +130,7 @@ class collectionVC: NSViewController, NSCollectionViewDataSource, NSCollectionVi
         collectionView.register(nib, forItemWithIdentifier: NSUserInterfaceItemIdentifier("CollectionViewItem"))
         
         
-        fetchItems()
+        setupFetchedResultsController()
         
         
     }// end view did load
