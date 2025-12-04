@@ -13,15 +13,30 @@ class webViewController03: NSViewController,WKUIDelegate {
     override func viewDidAppear() {
         super.viewDidAppear()
         
+        print("WebVC view frame: \(self.view.frame)")
+
+        
+        /*
+        
         if let window = self.view.window {
             if (!window.isZoomed) {
                 window.zoom(self);
             };
+            
+
+            if (!(window.styleMask == NSWindow.StyleMask.fullScreen) ) {
+
+                window.toggleFullScreen(self);
+
+            };
         }
 
+        */
+        
     }
     
-    
+//    var fullscreenManager: FullscreenWindowManager!
+
     
     var destURLString = "";
 
@@ -44,12 +59,38 @@ class webViewController03: NSViewController,WKUIDelegate {
     }
     
     @IBAction func closeModal(_ sender: NSButton) {
-        if let window = self.view.window {
-            window.close();
-        }
+        
+        FullscreenWindowManager.shared.dismissFullscreenWindow()
+        
+//        FullscreenWindowManager.shared.presentFullscreenViewController(webVC)
+
+
+        
+//        if let window = self.view.window {
+//            window.close();
+//        }
         
     }
     
+    
+    @IBAction func goBack(_ sender: Any) {
+        //go back in the browser history
+        
+        theWebView.goBack()
+    }
+    
+    
+    
+    
+    
+
+
+    
+    override func viewDidLayout() {
+        super.viewDidLayout()
+        self.view.frame = self.view.superview?.bounds ?? .zero
+    }
+
 
     
     func loadWebPage() {

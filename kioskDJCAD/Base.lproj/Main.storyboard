@@ -19,19 +19,6 @@
                                     <items>
                                         <menuItem title="About kioskDJCAD" id="5kV-Vb-QxS">
                                             <modifierMask key="keyEquivalentModifierMask"/>
-                                            <menu key="submenu" id="kG4-7d-e0X">
-                                                <items>
-                                                    <menuItem title="Item 1" id="OQZ-Ox-Xrq">
-                                                        <modifierMask key="keyEquivalentModifierMask"/>
-                                                    </menuItem>
-                                                    <menuItem title="Item 2" id="u4n-aA-Y5U">
-                                                        <modifierMask key="keyEquivalentModifierMask"/>
-                                                    </menuItem>
-                                                    <menuItem title="Item 3" id="Op7-UZ-T8e">
-                                                        <modifierMask key="keyEquivalentModifierMask"/>
-                                                    </menuItem>
-                                                </items>
-                                            </menu>
                                             <connections>
                                                 <action selector="orderFrontStandardAboutPanel:" target="Ady-hI-5gd" id="Exp-CZ-Vem"/>
                                             </connections>
@@ -87,16 +74,7 @@
                             </menuItem>
                             <menuItem title="View" id="H8h-7b-M4v">
                                 <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="View" id="HyV-fh-RgO">
-                                    <items>
-                                        <menuItem title="Enter Full Screen" alternate="YES" keyEquivalent="f" id="4J7-dP-txa">
-                                            <modifierMask key="keyEquivalentModifierMask" control="YES" command="YES"/>
-                                            <connections>
-                                                <action selector="toggleFullScreen:" target="Ady-hI-5gd" id="dU3-MA-1Rq"/>
-                                            </connections>
-                                        </menuItem>
-                                    </items>
-                                </menu>
+                                <menu key="submenu" title="View" id="HyV-fh-RgO"/>
                             </menuItem>
                             <menuItem title="Window" id="aUF-d1-5bR">
                                 <modifierMask key="keyEquivalentModifierMask"/>
@@ -111,6 +89,12 @@
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
                                                 <action selector="performZoom:" target="Ady-hI-5gd" id="DIl-cC-cCs"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Kiosk Mode" id="A9g-7X-hIN">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="enterKioskMode:" target="Voe-Tx-rLC" id="PwS-PN-Czd"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="eu3-7i-yIM"/>
@@ -157,25 +141,25 @@
             <objects>
                 <viewController id="HCv-hY-xs1" customClass="PrefsController" customModule="kioskDJCAD" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="VIk-E2-vo9">
-                        <rect key="frame" x="0.0" y="0.0" width="1193" height="941"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1280" height="941"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <customView id="s3r-eb-9oW">
-                                <rect key="frame" x="74" y="33" width="1045" height="893"/>
+                                <rect key="frame" x="74" y="33" width="1170" height="893"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <box fixedFrame="YES" borderType="line" title="top row" translatesAutoresizingMaskIntoConstraints="NO" id="XNc-vv-hkS">
-                                        <rect key="frame" x="17" y="472" width="1008" height="401"/>
+                                        <rect key="frame" x="17" y="472" width="1124" height="401"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <view key="contentView" id="UoL-tA-tcH">
-                                            <rect key="frame" x="3" y="3" width="1002" height="383"/>
+                                            <rect key="frame" x="3" y="3" width="1118" height="383"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <box fixedFrame="YES" borderType="line" title="First Website" translatesAutoresizingMaskIntoConstraints="NO" id="RQo-vR-wsi">
-                                                    <rect key="frame" x="17" y="260" width="968" height="103"/>
+                                                    <rect key="frame" x="17" y="260" width="1060" height="103"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <view key="contentView" id="5Vg-aX-is0">
-                                                        <rect key="frame" x="3" y="3" width="962" height="85"/>
+                                                        <rect key="frame" x="3" y="3" width="1054" height="85"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <subviews>
                                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eJB-08-lCG">
@@ -242,14 +226,25 @@
                                                                     <binding destination="Jep-Sh-47A" name="value" keyPath="values.show01" id="7Nk-a9-1GS"/>
                                                                 </connections>
                                                             </button>
+                                                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1ES-91-VH4">
+                                                                <rect key="frame" x="914" y="19" width="76" height="18"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                <buttonCell key="cell" type="check" title="External" bezelStyle="regularSquare" imagePosition="left" inset="2" id="BEM-rN-KMe">
+                                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                    <font key="font" metaFont="system"/>
+                                                                </buttonCell>
+                                                                <connections>
+                                                                    <binding destination="Jep-Sh-47A" name="value" keyPath="values.ext00" id="3L1-Nr-Ims"/>
+                                                                </connections>
+                                                            </button>
                                                         </subviews>
                                                     </view>
                                                 </box>
                                                 <box fixedFrame="YES" borderType="line" title="Second Website" translatesAutoresizingMaskIntoConstraints="NO" id="Jna-3p-wr4">
-                                                    <rect key="frame" x="17" y="153" width="968" height="103"/>
+                                                    <rect key="frame" x="17" y="153" width="1060" height="103"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <view key="contentView" id="jQD-Kt-Xye">
-                                                        <rect key="frame" x="3" y="3" width="962" height="85"/>
+                                                        <rect key="frame" x="3" y="3" width="1054" height="85"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <subviews>
                                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kw1-Vu-Lac">
@@ -316,14 +311,25 @@
                                                                     <binding destination="Jep-Sh-47A" name="value" keyPath="values.show02" id="eT7-dI-Zkc"/>
                                                                 </connections>
                                                             </button>
+                                                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="doI-bV-xVH">
+                                                                <rect key="frame" x="916" y="19" width="76" height="18"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                <buttonCell key="cell" type="check" title="External" bezelStyle="regularSquare" imagePosition="left" inset="2" id="HtL-N6-mgd">
+                                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                    <font key="font" metaFont="system"/>
+                                                                </buttonCell>
+                                                                <connections>
+                                                                    <binding destination="Jep-Sh-47A" name="value" keyPath="values.ext01" id="yrp-Kw-dwg"/>
+                                                                </connections>
+                                                            </button>
                                                         </subviews>
                                                     </view>
                                                 </box>
                                                 <box fixedFrame="YES" borderType="line" title="third Website" translatesAutoresizingMaskIntoConstraints="NO" id="xcB-ij-KxK">
-                                                    <rect key="frame" x="17" y="38" width="968" height="103"/>
+                                                    <rect key="frame" x="17" y="38" width="1060" height="103"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <view key="contentView" id="e1d-fe-Se7">
-                                                        <rect key="frame" x="3" y="3" width="962" height="85"/>
+                                                        <rect key="frame" x="3" y="3" width="1054" height="85"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <subviews>
                                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H9z-v3-5HV">
@@ -390,6 +396,17 @@
                                                                     <binding destination="Jep-Sh-47A" name="value" keyPath="values.show03" id="cTv-et-ccO"/>
                                                                 </connections>
                                                             </button>
+                                                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f5Q-PL-45u">
+                                                                <rect key="frame" x="915" y="19" width="76" height="18"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                <buttonCell key="cell" type="check" title="External" bezelStyle="regularSquare" imagePosition="left" inset="2" id="nFp-Wv-Jp3">
+                                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                    <font key="font" metaFont="system"/>
+                                                                </buttonCell>
+                                                                <connections>
+                                                                    <binding destination="Jep-Sh-47A" name="value" keyPath="values.ext02" id="c4A-0k-Ubh"/>
+                                                                </connections>
+                                                            </button>
                                                         </subviews>
                                                     </view>
                                                 </box>
@@ -422,17 +439,17 @@ DQ
                                         </connections>
                                     </button>
                                     <box fixedFrame="YES" borderType="line" title="bottom row" translatesAutoresizingMaskIntoConstraints="NO" id="uNB-Ba-n99">
-                                        <rect key="frame" x="20" y="56" width="1008" height="395"/>
+                                        <rect key="frame" x="20" y="56" width="1121" height="395"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <view key="contentView" id="x7v-RW-XCg">
-                                            <rect key="frame" x="3" y="3" width="1002" height="377"/>
+                                            <rect key="frame" x="3" y="3" width="1115" height="377"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <box fixedFrame="YES" borderType="line" title="forth Website" translatesAutoresizingMaskIntoConstraints="NO" id="Hih-oC-Ut2">
-                                                    <rect key="frame" x="17" y="254" width="968" height="103"/>
+                                                    <rect key="frame" x="17" y="254" width="1081" height="103"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <view key="contentView" id="62e-oF-7Eq">
-                                                        <rect key="frame" x="3" y="3" width="962" height="85"/>
+                                                        <rect key="frame" x="3" y="3" width="1075" height="85"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <subviews>
                                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gkI-qv-nyG">
@@ -499,14 +516,25 @@ DQ
                                                                     <binding destination="Jep-Sh-47A" name="value" keyPath="values.show04" id="INI-A7-RQl"/>
                                                                 </connections>
                                                             </button>
+                                                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E0V-CO-8Wo">
+                                                                <rect key="frame" x="914" y="19" width="76" height="18"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                <buttonCell key="cell" type="check" title="External" bezelStyle="regularSquare" imagePosition="left" inset="2" id="XGf-UG-Jkv">
+                                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                    <font key="font" metaFont="system"/>
+                                                                </buttonCell>
+                                                                <connections>
+                                                                    <binding destination="Jep-Sh-47A" name="value" keyPath="values.ext03" id="hJu-q4-H07"/>
+                                                                </connections>
+                                                            </button>
                                                         </subviews>
                                                     </view>
                                                 </box>
                                                 <box fixedFrame="YES" borderType="line" title="Fifth Website" translatesAutoresizingMaskIntoConstraints="NO" id="xFj-AZ-SaZ">
-                                                    <rect key="frame" x="17" y="147" width="968" height="103"/>
+                                                    <rect key="frame" x="17" y="147" width="1081" height="103"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <view key="contentView" id="hl4-Lw-AWP">
-                                                        <rect key="frame" x="3" y="3" width="962" height="85"/>
+                                                        <rect key="frame" x="3" y="3" width="1075" height="85"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <subviews>
                                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sBb-Dp-DKK">
@@ -573,14 +601,25 @@ DQ
                                                                     <binding destination="Jep-Sh-47A" name="value" keyPath="values.show05" id="sxZ-xJ-UlC"/>
                                                                 </connections>
                                                             </button>
+                                                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Oc-j8-XQy">
+                                                                <rect key="frame" x="913" y="19" width="76" height="18"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                <buttonCell key="cell" type="check" title="External" bezelStyle="regularSquare" imagePosition="left" inset="2" id="Acv-l1-Ufq">
+                                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                    <font key="font" metaFont="system"/>
+                                                                </buttonCell>
+                                                                <connections>
+                                                                    <binding destination="Jep-Sh-47A" name="value" keyPath="values.ext04" id="DAx-75-gjJ"/>
+                                                                </connections>
+                                                            </button>
                                                         </subviews>
                                                     </view>
                                                 </box>
                                                 <box fixedFrame="YES" borderType="line" title="Sixth Website" translatesAutoresizingMaskIntoConstraints="NO" id="ya2-G9-HcZ">
-                                                    <rect key="frame" x="17" y="40" width="968" height="103"/>
+                                                    <rect key="frame" x="17" y="40" width="1081" height="103"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <view key="contentView" id="S2M-1k-09M">
-                                                        <rect key="frame" x="3" y="3" width="962" height="85"/>
+                                                        <rect key="frame" x="3" y="3" width="1075" height="85"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <subviews>
                                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JBr-O5-at4">
@@ -647,6 +686,17 @@ DQ
                                                                     <binding destination="Jep-Sh-47A" name="value" keyPath="values.show06" id="z8m-do-Wwd"/>
                                                                 </connections>
                                                             </button>
+                                                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aeq-Lh-c4g">
+                                                                <rect key="frame" x="917" y="19" width="76" height="18"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                <buttonCell key="cell" type="check" title="External" bezelStyle="regularSquare" imagePosition="left" inset="2" id="O1z-1a-x2h">
+                                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                    <font key="font" metaFont="system"/>
+                                                                </buttonCell>
+                                                                <connections>
+                                                                    <binding destination="Jep-Sh-47A" name="value" keyPath="values.ext05" id="wHH-3u-UrZ"/>
+                                                                </connections>
+                                                            </button>
                                                         </subviews>
                                                     </view>
                                                 </box>
@@ -672,7 +722,7 @@ DQ
                 <customObject id="CIo-GY-zzn" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <userDefaultsController representsSharedInstance="YES" id="Jep-Sh-47A"/>
             </objects>
-            <point key="canvasLocation" x="-1583.5" y="1522.5"/>
+            <point key="canvasLocation" x="-1540" y="1522.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
@@ -950,6 +1000,7 @@ DQ
                         <outlet property="spacerBRight" destination="BS4-bu-mJf" id="8qW-De-ReI"/>
                         <outlet property="spacerTLeft" destination="zzY-p7-zL3" id="MrW-ad-PC3"/>
                         <outlet property="spacerTRight" destination="b2f-mz-UHO" id="JRR-8N-mxE"/>
+                        <segue destination="w7y-b1-ycp" kind="show" identifier="gotoWebView" id="qEx-TV-LqX"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -963,13 +1014,13 @@ DQ
         <!--View Controller 1-->
         <scene sceneID="yfr-i9-2rN">
             <objects>
-                <viewController id="w7y-b1-ycp" userLabel="View Controller 1" customClass="webViewController03" customModule="kioskDJCAD" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="webViewController03" id="w7y-b1-ycp" userLabel="View Controller 1" customClass="webViewController03" customModule="kioskDJCAD" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="zqA-nO-iV1">
                         <rect key="frame" x="0.0" y="0.0" width="800" height="600"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <wkWebView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="muW-32-lxC">
-                                <rect key="frame" x="5" y="5" width="790" height="531"/>
+                                <rect key="frame" x="5" y="5" width="790" height="530"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                     <wkPreferences key="preferences"/>
@@ -979,10 +1030,10 @@ DQ
                                 </connections>
                             </wkWebView>
                             <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="32" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Egx-8W-4Gw">
-                                <rect key="frame" x="5" y="544" width="266" height="36"/>
+                                <rect key="frame" x="5" y="543" width="393" height="37"/>
                                 <subviews>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ndc-DA-WgQ" userLabel="Close Button">
-                                        <rect key="frame" x="1" y="1" width="70" height="32"/>
+                                        <rect key="frame" x="2" y="1" width="75" height="32"/>
                                         <buttonCell key="cell" type="push" title="Close" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="S9p-iQ-fg6">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -992,7 +1043,7 @@ DQ
                                         </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lHr-CY-1Ea" userLabel="Reload button">
-                                        <rect key="frame" x="89" y="1" width="76" height="32"/>
+                                        <rect key="frame" x="97" y="1" width="82" height="32"/>
                                         <buttonCell key="cell" type="push" title="Reload" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="fBl-Fv-x1K">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -1002,7 +1053,7 @@ DQ
                                         </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ubh-LD-b2Z" userLabel="Refresh  button">
-                                        <rect key="frame" x="183" y="1" width="82" height="32"/>
+                                        <rect key="frame" x="199" y="1" width="87" height="32"/>
                                         <buttonCell key="cell" type="push" title="Refresh" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="keZ-fE-3Bp">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -1011,14 +1062,26 @@ DQ
                                             <action selector="refreshPage:" target="w7y-b1-ycp" id="3Zd-Qe-vzp"/>
                                         </connections>
                                     </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lcF-Ut-fDR">
+                                        <rect key="frame" x="306" y="1" width="85" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Back" bezelStyle="rounded" image="NSGoBackTemplate" imagePosition="leading" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="PNK-Xx-Qaj">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="goBack:" target="w7y-b1-ycp" id="cCk-Aa-4pc"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <edgeInsets key="edgeInsets" left="8" right="8" top="8" bottom="8"/>
                                 <visibilityPriorities>
                                     <integer value="1000"/>
                                     <integer value="1000"/>
                                     <integer value="1000"/>
+                                    <integer value="1000"/>
                                 </visibilityPriorities>
                                 <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
                                     <real value="3.4028234663852886e+38"/>
                                     <real value="3.4028234663852886e+38"/>
                                     <real value="3.4028234663852886e+38"/>
@@ -1045,6 +1108,7 @@ DQ
         </scene>
     </scenes>
     <resources>
+        <image name="NSGoBackTemplate" width="9" height="12"/>
         <image name="cat400x400" width="400" height="400"/>
         <image name="doggie400x400" width="400" height="400"/>
     </resources>

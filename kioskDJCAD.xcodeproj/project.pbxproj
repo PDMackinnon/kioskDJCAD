@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84E80ACA2DC262B900B80598 /* FullscreenWindowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E80AC92DC262B900B80598 /* FullscreenWindowManager.swift */; };
 		F925BA6D282BBAD5005C298C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F925BA6C282BBAD5005C298C /* AppDelegate.swift */; };
 		F925BA6F282BBAD5005C298C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F925BA6E282BBAD5005C298C /* ViewController.swift */; };
 		F925BA71282BBAE2005C298C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F925BA70282BBAE2005C298C /* Assets.xcassets */; };
@@ -20,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		84E80AC92DC262B900B80598 /* FullscreenWindowManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullscreenWindowManager.swift; sourceTree = "<group>"; };
+		84E80ACC2DC27D3300B80598 /* codescratch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = codescratch.swift; sourceTree = "<group>"; };
 		F925BA69282BBAD5005C298C /* kioskDJCAD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kioskDJCAD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F925BA6C282BBAD5005C298C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F925BA6E282BBAD5005C298C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +73,8 @@
 				F925BA85282BE6AD005C298C /* webViewController03.swift */,
 				F925BA6C282BBAD5005C298C /* AppDelegate.swift */,
 				F925BA6E282BBAD5005C298C /* ViewController.swift */,
+				84E80ACC2DC27D3300B80598 /* codescratch.swift */,
+				84E80AC92DC262B900B80598 /* FullscreenWindowManager.swift */,
 				F9C81E8929CC9B9A0023A4C2 /* .gitignore */,
 				F925BA70282BBAE2005C298C /* Assets.xcassets */,
 				F925BA72282BBAE2005C298C /* Main.storyboard */,
@@ -163,6 +168,7 @@
 				F925BA8D282C0DFD005C298C /* PrefsController.swift in Sources */,
 				F925BA6F282BBAD5005C298C /* ViewController.swift in Sources */,
 				F925BA86282BE6AD005C298C /* webViewController03.swift in Sources */,
+				84E80ACA2DC262B900B80598 /* FullscreenWindowManager.swift in Sources */,
 				F9C81E8D29CCA39E0023A4C2 /* AndTransformer.swift in Sources */,
 				F925BA6D282BBAD5005C298C /* AppDelegate.swift in Sources */,
 				F925D8EA29A397FB007B0FC0 /* FileURLToImageTransformer.swift in Sources */,
@@ -316,7 +322,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.92b;
+				MARKETING_VERSION = 1.95a;
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.paulmackinnon.kioskDJCAD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -340,7 +346,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.92b;
+				MARKETING_VERSION = 1.95a;
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.paulmackinnon.kioskDJCAD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

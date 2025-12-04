@@ -9,7 +9,10 @@ import Cocoa
 
 class ViewController: NSViewController {
     
+    var shouldForceFullscreen = true
 
+//    @IBOutlet weak var hiddenBtn: NSButton!
+    
     @IBOutlet weak var spacerTLeft: NSView!
     @IBOutlet weak var spacerTRight: NSView!
     @IBOutlet weak var spacerBLeft: NSView!
@@ -20,49 +23,49 @@ class ViewController: NSViewController {
     @IBOutlet weak var imgButton2: NSButton!
     @IBOutlet weak var imgButton3: NSButton!
     
-    var studentName1 = "";
-    var studentName2 = "";
-
-    var webSiteUrlString1 = "";
-    var webSiteUrlString2 = "";
-
-    private let studentName1key = "firstSiteName";
-    private let studentName2key = "secondSiteName";
-    private let webSiteUrlString1key = "firstSiteURL";
-    private let webSiteUrlString2key = "secondSiteURL";
-    private let userImgFile1key = "firstFileURL";
-    private let userImgFile2key = "secondFileURL";
-
-    
-    
-    
     private let webSiteUrlKeys = ["siteURL00","siteURL01","siteURL02","siteURL03","siteURL04","siteURL05",]
     
+    private let externalOptionKeys = ["ext00","ext01","ext02","ext03","ext04","ext05",]
+    
+
     override func viewDidAppear() {
         super.viewDidAppear()
         
-//        if let window = self.view.window {
-//            if (!(window.styleMask == NSWindow.StyleMask.fullScreen) ) {
-//
-//                window.toggleFullScreen(self);
-//
-//            };
-//        }
-        
-        
-    }//end view did appear
-    
-    /*
-     
-     // Set the boolean value
-     let defaults = UserDefaults.standard
-     defaults.set(true, forKey: "isHidden")
+        if let window = self.view.window {
+            // Disable tiling and fullscreen behaviors
+            window.collectionBehavior.remove(.fullScreenPrimary)
+            window.collectionBehavior.remove(.fullScreenAllowsTiling)
 
-     // Bind the boolean value to your NSView's hidden property using Cocoa bindings
-     yourNSView.bind(NSBindingName(rawValue: "hidden"), to: defaults, withKeyPath: "isHidden", options: nil)
-     
-     */
- 
+            // Optional: confirm applied
+            print("Collection behavior after update: \(window.collectionBehavior)")
+        }
+
+        guard shouldForceFullscreen else {
+            print("Skipping fullscreen setup")
+            return
+        }
+
+        if let window = self.view.window {
+            if window.styleMask.contains(.fullScreen) {
+                window.toggleFullScreen(self)
+            }
+
+//            print(window.collectionBehavior.rawValue)
+//
+//            window.collectionBehavior.remove(.fullScreenPrimary)
+//            window.collectionBehavior.remove(.fullScreenAllowsTiling)
+//            print(window.collectionBehavior.rawValue)
+
+            
+            if let screen = NSScreen.main {
+                let frame = screen.frame
+                window.setFrame(frame, display: true)
+                window.styleMask = [.borderless]
+                window.level = .mainMenu + 1
+            }
+        }
+    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,29 +77,16 @@ class ViewController: NSViewController {
         print("transformer.transformedValue([imgButton1,imgButton2,imgButton3]): \(String(describing: transformer.transformedValue([imgButton1.isHidden,imgButton2.isHidden,imgButton3.isHidden])))")
         
         // Do any additional setup after loading the view.
-        
-//        let bindingOptions = [NSBindingOption.valueTransformerName//: AndTransformer]
-        
-        
-        //   let bindingOptions= [NSBindingOption.valueTransformerNameBindingOption: NSValueTransformerName.AndTransformerName]
-        
-      //  myTextField.bind(NSValueBinding, to: myObject, withKeyPath: "myValue", options: [NSValueTransformerNameBindingOption: "MyValueTransformer"])
-        
 
+        let pressRecognizer = NSPressGestureRecognizer(target: self, action: #selector(hiddenExitTest(_:)))
+        pressRecognizer.minimumPressDuration = 3.0  // seconds
+        pressRecognizer.buttonMask = 2
+//        hiddenBtn.addGestureRecognizer(pressRecognizer)
         
-//        spacerTLeft.bind(NSBindingName(rawValue: "hidden"), to:  [imgButton1,imgButton2,imgButton3], withKeyPath: "isHidden", options: [NSBindingOption.valueTransformerName:"AndTransformer"])
-        
-      //  spacerTLeft.bind(NSBindingName(rawValue: "hidden"), to: [imgButton1,imgButton2,imgButton3], withKeyPath: "hidden", options: bindingOptions)
-        
-        /*
-         
-         otherNSView2.bind(NSBindingName(rawValue: "hidden"), toObjects: [yourNSView, otherNSView1], withKeyPaths:["hidden", "hidden"], options:[bindingOptions])
-         
-         */
+        self.view.addGestureRecognizer(pressRecognizer)
         
         
-        
-    }
+    } //end view did load
 
     override var representedObject: Any? {
         didSet {
@@ -109,11 +99,6 @@ class ViewController: NSViewController {
         
         let userDefaults = UserDefaults.standard;
         
-//        studentName1 = userDefaults.string(forKey: studentName1key) ?? "website1";
-        webSiteUrlString1 = userDefaults.string(forKey: webSiteUrlString1key) ?? "https://www.dundee.ac.uk";
-        
-//        studentName2 = userDefaults.string(forKey: studentName2key) ?? "website2";
-        webSiteUrlString2 = userDefaults.string(forKey: webSiteUrlString2key) ?? "https://www.dundee.ac.uk";
         
         guard
         let tag = (sender as? NSButton)?.tag
@@ -133,15 +118,34 @@ class ViewController: NSViewController {
 
     }
     
+    @IBAction func openWebView(_ sender: Any?) {
+        let userDefaults = UserDefaults.standard
+        
+        guard
+            let tag = (sender as? NSButton)?.tag
+        else { return }
+        
+        let webSiteUrlString = userDefaults.string(forKey: webSiteUrlKeys[tag]) ?? "https://www.dundee.ac.uk"
+
+        let storyboard = NSStoryboard(name: "Main", bundle: nil)
+
+        guard let webVC = storyboard.instantiateController(withIdentifier: "webViewController03") as? webViewController03 else {
+            return
+        }
+
+        webVC.destURLString = webSiteUrlString
+        
+        FullscreenWindowManager.shared.presentFullscreenViewController(webVC)
+
+    }
+
+    
+    
+    
     @IBAction func OpenInBrowser(_ sender: NSButton) {
             
         let userDefaults = UserDefaults.standard;
         
-//        studentName1 = userDefaults.string(forKey: studentName1key) ?? "website1";
-//        webSiteUrlString1 = userDefaults.string(forKey: webSiteUrlString1key) ?? "https://www.dundee.ac.uk";
-        
-//        studentName2 = userDefaults.string(forKey: studentName2key) ?? "website2";
-//        webSiteUrlString2 = userDefaults.string(forKey: webSiteUrlString2key) ?? "https://www.dundee.ac.uk";
         
         guard
         let tag = (sender as? NSButton)?.tag
@@ -151,14 +155,82 @@ class ViewController: NSViewController {
         
         let webSiteUrlString = userDefaults.string(forKey: webSiteUrlKeys[tag]) ?? "https://www.dundee.ac.uk";
         
-        guard let url = URL(string: webSiteUrlString) else {return}
-        NSWorkspace.shared.open(url);
-  
         
+        let extBrowser = userDefaults.bool(forKey: externalOptionKeys[tag])
+        
+        
+        if (extBrowser) {
+            
+            print("Launcher got URL string: [\(webSiteUrlString)]")
 
+            guard let url = URL(string: webSiteUrlString) else {return}
+            
+            let config = NSWorkspace.OpenConfiguration()
+            config.promptsUserIfNeeded = false    // No extra UI
+            
+            
+            NSWorkspace.shared.open(url, configuration: config);
+
+            
+        }
+        else {
+            openWebView(sender)
+
+            
+        }
+    } //end func
+    
+    func revertToNormalMode() {
+        
+        shouldForceFullscreen = false
+
+        
+        if let window = self.view.window {
+            // Restore normal window style
+            window.styleMask = [.titled, .closable, .resizable, .miniaturizable]
+            window.level = .normal
+            window.setFrame(NSScreen.main?.visibleFrame ?? .zero, display: true, animate: true)
+            
+            window.standardWindowButton(.closeButton)?.isHidden = false
+            window.standardWindowButton(.miniaturizeButton)?.isHidden = false
+            window.standardWindowButton(.zoomButton)?.isHidden = true
+
+            
+            // Optional: make sure the menu bar becomes visible again
+            NSApp.setActivationPolicy(.regular)
+            
+            //            print(window.collectionBehavior.rawValue)
+            //
+            //            window.collectionBehavior.remove(.fullScreenPrimary)
+            //            window.collectionBehavior.remove(.fullScreenAllowsTiling)
+            //            print(window.collectionBehavior.rawValue)
+            
+        }
+    }
+
+    @IBAction func hiddenExitTest(_ sender: Any) {
+
+        revertToNormalMode()
     }
     
+    @IBAction func enterKioskMode(_ sender: Any?) {
+        shouldForceFullscreen = true
+
+        if let screen = NSScreen.main,
+           let window = self.view.window {
+            let frame = screen.frame
+            window.setFrame(frame, display: true)
+            window.styleMask = [.borderless]
+            window.level = .mainMenu + 1
+            window.standardWindowButton(.closeButton)?.isHidden = true
+            window.standardWindowButton(.miniaturizeButton)?.isHidden = true
+            window.standardWindowButton(.zoomButton)?.isHidden = true
+
+
+        }
+    }
     
 
-}
+
+}// end class
 

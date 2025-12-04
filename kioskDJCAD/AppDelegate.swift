@@ -21,9 +21,19 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         }
 
-
+    func applicationWillFinishLaunching(_ notification: Notification) {
+        UserDefaults.standard.set(false, forKey: "NSFullScreenMenuItemEverywhere")
+    }
+    
+    
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
+        if let window = NSApp.windows.first {
+            window.collectionBehavior.remove(.fullScreenPrimary)
+            window.collectionBehavior.remove(.fullScreenAllowsTiling)
+            
+            window.collectionBehavior = .fullScreenNone
+        }
         
   
     }
@@ -38,6 +48,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
     }
     
+    @IBAction func enterKioskMode(_ sender: Any) {
+        
+        if let window = NSApp.mainWindow,
+           let viewController = window.contentViewController as? ViewController {
+            viewController.enterKioskMode(sender)
+        }
+    }
     
 }
 
